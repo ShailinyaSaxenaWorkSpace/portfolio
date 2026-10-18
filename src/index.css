@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Newsreader', Georgia, Cambria, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+
+    --bg-paper: #FBF9F5;
+    --bg-paper-alt: #F4EFEA;
+    --text-ink: #191C21;
+    --text-secondary: #575D6A;
+    --border-subtle: #E6E0D5;
+    --accent-terracotta: #B84C2A;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--bg-paper);
+    color: var(--text-ink);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-paper);
+    color: var(--text-ink);
+    margin: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Quiet scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F4EFEA;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D5CEBE;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B8B0A0;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Subtle, tactile paper rule lines */
+.hairline-b {
+  border-bottom: 1px solid #E6E0D5;
+}
+.hairline-t {
+  border-top: 1px solid #E6E0D5;
+}
+.hairline-r {
+  border-right: 1px solid #E6E0D5;
+}
+.hairline-l {
+  border-left: 1px solid #E6E0D5;
+}
+
+/* Editorial blockquotes & callouts */
+.editorial-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #191C21;
+}
+
+/* Small-caps docket notation from classic editorial print */
+.docket {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A8190;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
