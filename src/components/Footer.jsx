@@ -88,13 +88,13 @@ export default function Footer() {
               </li>
               <li className="pt-1">
                 <a
-                  href="/Shailinya_Saxena_Resume.pdf"
-                  download="Shailinya_Saxena_Resume.pdf"
+                  href="/Neudact_Engineers_Capabilities_Brochure.pdf"
+                  download="Neudact_Engineers_Capabilities_Brochure.pdf"
                   className="inline-flex items-center gap-1.5 text-[#B84C2A] font-semibold hover:underline"
-                  title="Download verified resume (PDF)"
+                  title="Download Capabilities Brochure (PDF)"
                 >
                   <FileText className="w-3.5 h-3.5" />
-                  <span>Download Résumé (PDF)</span>
+                  <span>Download Brochure (PDF)</span>
                 </a>
               </li>
             </ul>

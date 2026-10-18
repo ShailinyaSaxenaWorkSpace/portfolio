@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neudact Engineers — Capabilities &amp; Services Profile</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 12mm 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #191C21;
+      background-color: #FFFFFF;
+      font-size: 9.5pt;
+      line-height: 1.45;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      page-break-after: always;
+      height: 270mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    .header-bar {
+      border-bottom: 1.5pt solid #191C21;
+      padding-bottom: 6pt;
+      margin-bottom: 14pt;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .brand-name {
+      font-family: 'Newsreader', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 16pt;
+      color: #191C21;
+      letter-spacing: -0.3pt;
+    }
+
+    .brand-tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7pt;
+      color: #B84C2A;
+      font-weight: 600;
+      letter-spacing: 0.5pt;
+      text-transform: uppercase;
+    }
+
+    .doc-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7pt;
+      color: #7A8190;
+      text-align: right;
+    }
+
+    .footer-bar {
+      border-top: 1pt solid #E6E0D5;
+      padding-top: 5pt;
+      margin-top: 10pt;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 6.5pt;
+      color: #7A8190;
+    }
+
+    h1 {
+      font-family: 'Newsreader', serif;
+      font-weight: 500;
+      font-size: 24pt;
+      line-height: 1.15;
+      color: #191C21;
+      margin-bottom: 6pt;
+    }
+
+    h2 {
+      font-family: 'Newsreader', serif;
+      font-weight: 600;
+      font-size: 13pt;
+      color: #191C21;
+      margin-bottom: 4pt;
+    }
+
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 9pt;
+      color: #191C21;
+      margin-bottom: 2pt;
+    }
+
+    p {
+      color: #4A5160;
+      margin-bottom: 6pt;
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 6.5pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 2pt 5pt;
+      border-radius: 2pt;
+      background: #FAF5EE;
+      color: #B84C2A;
+      border: 0.5pt solid #E6DFD3;
+      margin-bottom: 4pt;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10pt;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8pt;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 8pt;
+    }
+
+    .card {
+      border: 0.75pt solid #E0D8CB;
+      background: #FCFAF7;
+      padding: 8pt 9pt;
+      border-radius: 3pt;
+    }
+
+    .card-highlight {
+      border: 1pt solid #191C21;
+      background: #FFFFFF;
+      padding: 8pt 9pt;
+      border-radius: 3pt;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 4pt;
+      font-size: 8pt;
+      color: #4A5160;
+      margin-bottom: 3pt;
+      line-height: 1.35;
+    }
+
+    .bullet {
+      width: 3pt;
+      height: 3pt;
+      background-color: #B84C2A;
+      border-radius: 50%;
+      margin-top: 3.5pt;
+      flex-shrink: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.5pt;
+      margin-top: 4pt;
+      margin-bottom: 8pt;
+    }
+
+    th {
+      background: #F2ECE3;
+      color: #191C21;
+      font-family: 'JetBrains Mono', monospace;
+      text-align: left;
+      padding: 4pt 6pt;
+      border: 0.5pt solid #DDD5C7;
+      font-weight: 600;
+      font-size: 7pt;
+    }
+
+    td {
+      padding: 4pt 6pt;
+      border: 0.5pt solid #E6DFD3;
+      color: #4A5160;
+      line-height: 1.3;
+    }
+
+    .disclaimer-box {
+      border-left: 2pt solid #B84C2A;
+      background: #FAF7F0;
+      padding: 6pt 8pt;
+      font-size: 7.5pt;
+      color: #5D5545;
+      margin-top: 6pt;
+      border-radius: 0 3pt 3pt 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1: COVER & EXECUTIVE CAPABILITIES PROFILE -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div>
+          <div class="brand-name">Neudact Engineers</div>
+          <div class="brand-tagline">Where Intelligence Meets Execution</div>
+        </div>
+        <div class="doc-meta">
+          CAPABILITIES PROFILE &amp; SERVICES BROCHURE<br>
+          GURUGRAM, HARYANA, INDIA · 2026 EDITION
+        </div>
+      </div>
+
+      <div style="margin-bottom: 14pt; padding: 12pt; background: #FAF7F2; border: 1pt solid #E2D9CC; border-radius: 4pt;">
+        <span class="badge">CORPORATE PROFILE &amp; SERVICE DECK</span>
+        <h1 style="margin-top: 4pt; margin-bottom: 6pt;">Build Better. Bid Smarter. Automate More.</h1>
+        <p style="font-size: 10.5pt; line-height: 1.5; color: #323842; max-width: 95%;">
+          From professional corporate websites and tailored business software to end-to-end tender management and custom AI automation, Neudact Engineers helps businesses turn complex requirements into disciplined, dependable solutions.
+        </p>
+      </div>
+
+      <!-- Core Identity & Philosophy -->
+      <div class="grid-2" style="margin-bottom: 12pt;">
+        <div class="card">
+          <div class="badge">WHO WE ARE</div>
+          <h2 style="font-size: 11pt;">Engineering Rigor Meets Procurement Discipline</h2>
+          <p style="font-size: 8.5pt;">
+            Neudact Engineers operates at the intersection of technology, government procurement, and operations engineering. We support EPC contractors, infrastructure developers, and growing technical enterprises that require flawless compliance documentation and custom software that keeps operations running reliably.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="badge">OPERATIONAL BASE</div>
+          <h2 style="font-size: 11pt;">Direct Communication &amp; Execution</h2>
+          <p style="font-size: 8.5pt;">
+            Headquartered in Gurugram, Haryana (Delhi NCR), we provide structured remote support nationwide alongside on-site technical coordination. Every engagement is managed with transparent scope, strict confidentiality, and zero sales pressure.
+          </p>
+        </div>
+      </div>
+
+      <!-- Four Service Divisions Summary -->
+      <div style="margin-bottom: 8pt;">
+        <h2 style="border-bottom: 0.5pt solid #E0D8CB; padding-bottom: 3pt; margin-bottom: 8pt; font-size: 12pt;">
+          Four Core Business Divisions
+        </h2>
+        <div class="grid-2">
+          <div class="card">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; font-weight: bold; color: #B84C2A;">DIVISION 01 /</span>
+            <h3 style="font-size: 9.5pt; margin-top: 1pt;">Website Design &amp; Development</h3>
+            <p style="font-size: 8pt; margin-bottom: 4pt;">
+              Corporate, profile, and high-conversion service websites engineered with modern React 19, sub-second load times, and structured B2B inquiry capture.
+            </p>
+            <div style="font-size: 7.5pt; font-family: 'JetBrains Mono', monospace; color: #7A8190;">
+              React 19 · Semantic HTML5 · Tailwind CSS · Fast Cloud Delivery
+            </div>
+          </div>
+
+          <div class="card">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; font-weight: bold; color: #B84C2A;">DIVISION 02 /</span>
+            <h3 style="font-size: 9.5pt; margin-top: 1pt;">End-to-End Tender Management</h3>
+            <p style="font-size: 8pt; margin-bottom: 4pt;">
+              Full lifecycle support: GeM/CPPP/IREPS discovery, clause-by-clause NIT &amp; BOQ review, PQ eligibility matrices, Cover 1 &amp; 2 compilation, and submission coordination.
+            </p>
+            <div style="font-size: 7.5pt; font-family: 'JetBrains Mono', monospace; color: #7A8190;">
+              GeM · CPPP · IREPS · State Portals · Strict Compliance Matrices
+            </div>
+          </div>
+
+          <div class="card">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; font-weight: bold; color: #B84C2A;">DIVISION 03 /</span>
+            <h3 style="font-size: 9.5pt; margin-top: 1pt;">Custom Software &amp; Applications</h3>
+            <p style="font-size: 8pt; margin-bottom: 4pt;">
+              Bespoke web applications, internal operational systems, role-based admin panels, inventory trackers, and database-backed workflow tools.
+            </p>
+            <div style="font-size: 7.5pt; font-family: 'JetBrains Mono', monospace; color: #7A8190;">
+              Node.js · PostgreSQL · Express · MongoDB · RESTful APIs
+            </div>
+          </div>
+
+          <div class="card">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; font-weight: bold; color: #B84C2A;">DIVISION 04 /</span>
+            <h3 style="font-size: 9.5pt; margin-top: 1pt;">Custom AI Agents &amp; Automation</h3>
+            <p style="font-size: 8pt; margin-bottom: 4pt;">
+              Document search assistants, tender specification extractors, Excel automation pipelines, field notification bots, and human-in-the-loop AI workflows.
+            </p>
+            <div style="font-size: 7.5pt; font-family: 'JetBrains Mono', monospace; color: #7A8190;">
+              Vector Search (RAG) · Telegram/WhatsApp APIs · Python · Cloud Webhooks
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>NEUDACT ENGINEERS · GURUGRAM, HARYANA</span>
+      <span>CAPABILITIES PROFILE &amp; SERVICES BROCHURE</span>
+      <span>PAGE 01 / 03</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2: DETAILED SERVICE DIVISIONS (TENDERS & WEBSITES) -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div>
+          <div class="brand-name">Neudact Engineers</div>
+          <div class="brand-tagline">Tender Management &amp; Web Engineering</div>
+        </div>
+        <div class="doc-meta">
+          SPECIALIST CAPABILITIES BREAKDOWN
+        </div>
+      </div>
+
+      <!-- DIVISION 02: TENDER MANAGEMENT DETAILED -->
+      <div style="margin-bottom: 14pt;">
+        <span class="badge">CORE SPECIALIST PRACTICE</span>
+        <h2 style="font-size: 14pt;">End-to-End Tender Management &amp; Bid Support</h2>
+        <p style="font-size: 8.5pt; margin-bottom: 8pt;">
+          We support businesses throughout the tender lifecycle, from opportunity screening and Pre-Qualification (PQ) analysis to full bid documentation, portal upload coordination, and post-submission support.
+        </p>
+
+        <div style="margin-bottom: 8pt;">
+          <h3 style="font-size: 8.5pt; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; color: #191C21; border-bottom: 0.5pt solid #E0D8CB; padding-bottom: 2pt;">
+            The 6-Stage Tender Lifecycle Sequence
+          </h3>
+          <div class="grid-3" style="margin-top: 6pt;">
+            <div class="card">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 7pt; font-weight: bold; color: #B84C2A;">STAGE 01</span>
+              <h3 style="font-size: 8.5pt;">Discovery &amp; Screening</h3>
+              <p style="font-size: 7.5pt; margin-bottom: 0;">Multi-portal surveillance across GeM, CPPP, IREPS; capability matching; opportunity executive bulletins.</p>
+            </div>
+            <div class="card">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 7pt; font-weight: bold; color: #B84C2A;">STAGE 02</span>
+              <h3 style="font-size: 8.5pt;">Detailed Analysis</h3>
+              <p style="font-size: 7.5pt; margin-bottom: 0;">NIT/BOQ/GCC/SCC review, 3-year turnover calculation, similar work criteria, EMD/PBG review, disqualification audit.</p>
+            </div>
+            <div class="card">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 7pt; font-weight: bold; color: #B84C2A;">STAGE 03</span>
+              <h3 style="font-size: 8.5pt;">Bid Documentation</h3>
+              <p style="font-size: 7.5pt; margin-bottom: 0;">Compliance matrices, Cover 1 &amp; 2 compilation, declaration drafting, JV/MAF coordination, pre-bid queries.</p>
+            </div>
+            <div class="card">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 7pt; font-weight: bold; color: #B84C2A;">STAGE 04</span>
+              <h3 style="font-size: 8.5pt;">Quality Review</h3>
+              <p style="font-size: 7.5pt; margin-bottom: 0;">Requirement-by-requirement audit, cross-checks against authentic client records, missing document reports.</p>
+            </div>
+            <div class="card">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 7pt; font-weight: bold; color: #B84C2A;">STAGE 05</span>
+              <h3 style="font-size: 8.5pt;">Submission Support</h3>
+              <p style="font-size: 7.5pt; margin-bottom: 0;">Upload coordination on portals, DSC signature verification assistance, token archiving, receipt verification.</p>
+            </div>
+            <div class="card">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 7pt; font-weight: bold; color: #B84C2A;">STAGE 06</span>
+              <h3 style="font-size: 8.5pt;">Post-Bid Support</h3>
+              <p style="font-size: 7.5pt; margin-bottom: 0;">Corrigendum monitoring, technical query clarification replies, record management, LOA checklist verification.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Three Packages Table -->
+        <table style="margin-top: 6pt;">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Package Tier</th>
+              <th style="width: 35%;">Target Requirement</th>
+              <th style="width: 40%;">Core Scope &amp; Deliverables</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pkg A: Tender Discovery &amp; Screening</strong></td>
+              <td>Businesses seeking relevant opportunities identified and assessed.</td>
+              <td>Daily/weekly portal discovery, capability matching, PQ summaries, direct document links, deadline tracking.</td>
+            </tr>
+            <tr>
+              <td><strong>Pkg B: Complete Bid Preparation Support</strong></td>
+              <td>Contractors needing structured bid preparation and submission review.</td>
+              <td>Full NIT/BOQ analysis, compliance matrices, checklists, document compilation, quality review, portal upload coordination.</td>
+            </tr>
+            <tr>
+              <td><strong>Pkg C: Dedicated Tender Desk</strong></td>
+              <td>Active contractors handling multiple concurrent public bids.</td>
+              <td>Continuous multi-bid pipeline management, recurring screening, pre-bid query drafting, and regular status reporting.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="disclaimer-box">
+          <strong>Integrity &amp; Compliance Protocol:</strong> Actual portal submission must be performed by the client or authorized signatory where permitted. Neudact Engineers strictly works with authentic client-provided data and does not fabricate certificates, financial figures, or experience records.
+        </div>
+      </div>
+
+      <!-- DIVISION 01: WEBSITE DESIGN & DEVELOPMENT -->
+      <div style="margin-top: 10pt;">
+        <span class="badge">DIGITAL PRESENCE</span>
+        <h2 style="font-size: 13pt;">Website Design &amp; Development</h2>
+        <p style="font-size: 8.5pt; margin-bottom: 6pt;">
+          We build professional corporate and service websites engineered to establish authority, articulate technical capabilities, and capture qualified client inquiries.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 style="font-size: 8.5pt;">Website Offerings</h3>
+            <div class="list-item"><span class="bullet"></span><span>Corporate &amp; Engineering Profile Websites</span></div>
+            <div class="list-item"><span class="bullet"></span><span>Professional Service &amp; Capability Showcase Sites</span></div>
+            <div class="list-item"><span class="bullet"></span><span>High-Conversion Lead Generation &amp; Landing Pages</span></div>
+            <div class="list-item"><span class="bullet"></span><span>Contact Form Integrations (Email, WhatsApp, CRM)</span></div>
+            <div class="list-item"><span class="bullet"></span><span>Website Modernization, Speed Optimization &amp; Redesigns</span></div>
+          </div>
+
+          <div class="card">
+            <h3 style="font-size: 8.5pt;">5-Step Execution Methodology</h3>
+            <div class="list-item"><strong>1.</strong><span>&nbsp;Understand business goals &amp; target decision-makers</span></div>
+            <div class="list-item"><strong>2.</strong><span>&nbsp;Plan information architecture &amp; content hierarchy</span></div>
+            <div class="list-item"><strong>3.</strong><span>&nbsp;Design clean, editorial user experience without template bloat</span></div>
+            <div class="list-item"><strong>4.</strong><span>&nbsp;Develop in modern React 19, Tailwind CSS &amp; perform tests</span></div>
+            <div class="list-item"><strong>5.</strong><span>&nbsp;Deploy to fast cloud infrastructure &amp; provide support</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>NEUDACT ENGINEERS · GURUGRAM, HARYANA</span>
+      <span>CAPABILITIES PROFILE &amp; SERVICES BROCHURE</span>
+      <span>PAGE 02 / 03</span>
+    </div>
+  </div>
+
+  <!-- PAGE 3: SOFTWARE, AI AUTOMATION, SECTOR ALIGNMENT & CONTACT -->
+  <div class="page">
+    <div>
+      <div class="header-bar">
+        <div>
+          <div class="brand-name">Neudact Engineers</div>
+          <div class="brand-tagline">Software, AI Automation &amp; Engagement</div>
+        </div>
+        <div class="doc-meta">
+          TECHNOLOGY &amp; CONTRACTING SECTORS
+        </div>
+      </div>
+
+      <!-- DIVISION 03 & 04: SOFTWARE & AI -->
+      <div class="grid-2" style="margin-bottom: 12pt;">
+        <div class="card">
+          <span class="badge">DIVISION 03</span>
+          <h2 style="font-size: 11pt;">Custom Software &amp; Business Applications</h2>
+          <p style="font-size: 8pt; margin-bottom: 4pt;">
+            Tailored software designed to eliminate operational bottlenecks and replace messy spreadsheets with clean database architectures.
+          </p>
+          <div class="list-item"><span class="bullet"></span><span>Custom web applications &amp; client portals</span></div>
+          <div class="list-item"><span class="bullet"></span><span>Internal operations &amp; project management tools</span></div>
+          <div class="list-item"><span class="bullet"></span><span>Admin dashboards with persistent PostgreSQL/MongoDB</span></div>
+          <div class="list-item"><span class="bullet"></span><span>Tender pipeline &amp; milestone tracking systems</span></div>
+          <div class="list-item"><span class="bullet"></span><span>Excel data processing utilities &amp; API webhooks</span></div>
+        </div>
+
+        <div class="card">
+          <span class="badge">DIVISION 04</span>
+          <h2 style="font-size: 11pt;">Custom AI Agents &amp; Business Automation</h2>
+          <p style="font-size: 8pt; margin-bottom: 4pt;">
+            Practical machine intelligence that extracts information from dense documents and automates repetitive office tasks.
+          </p>
+          <div class="list-item"><span class="bullet"></span><span>Document search &amp; company knowledge-base agents</span></div>
+          <div class="list-item"><span class="bullet"></span><span>Tender-document clause extraction &amp; summary agents</span></div>
+          <div class="list-item"><span class="bullet"></span><span>Automated multi-channel alerts (Telegram &amp; WhatsApp)</span></div>
+          <div class="list-item"><span class="bullet"></span><span>Automated Excel report generation &amp; two-way sync</span></div>
+          <div class="list-item"><span class="bullet"></span><span>Strict Human-in-the-Loop review for compliance data</span></div>
+        </div>
+      </div>
+
+      <!-- TARGET INDUSTRIES TABLE -->
+      <div style="margin-bottom: 10pt;">
+        <h2 style="font-size: 11.5pt; border-bottom: 0.5pt solid #E0D8CB; padding-bottom: 2pt; margin-bottom: 6pt;">
+          Target Contracting Industries
+        </h2>
+        <div class="grid-4" style="font-size: 7.5pt;">
+          <div class="card" style="padding: 6pt;">
+            <strong>EPC &amp; Infrastructure</strong><br>
+            <span style="color:#6A7180;">Civil, highway, sub-station EPC tenders &amp; composite PQ matrices.</span>
+          </div>
+          <div class="card" style="padding: 6pt;">
+            <strong>Railways &amp; Transit</strong><br>
+            <span style="color:#6A7180;">IREPS portal navigation, RDSO specifications &amp; electrical works.</span>
+          </div>
+          <div class="card" style="padding: 6pt;">
+            <strong>Telecom &amp; OFC</strong><br>
+            <span style="color:#6A7180;">Optical fiber laying, HDD/trenching, BSNL/BharatNet tenders.</span>
+          </div>
+          <div class="card" style="padding: 6pt;">
+            <strong>Solar &amp; Renewables</strong><br>
+            <span style="color:#6A7180;">SECI, NTPC &amp; state DISCOM solar EPC documentation.</span>
+          </div>
+          <div class="card" style="padding: 6pt;">
+            <strong>CCTV &amp; Surveillance</strong><br>
+            <span style="color:#6A7180;">Safe City, ICCC, campus security &amp; technical SLA matrices.</span>
+          </div>
+          <div class="card" style="padding: 6pt;">
+            <strong>Engineering Services</strong><br>
+            <span style="color:#6A7180;">Testing, maintenance, technical staffing &amp; ISO compliance.</span>
+          </div>
+          <div class="card" style="padding: 6pt;">
+            <strong>Procurement Suppliers</strong><br>
+            <span style="color:#6A7180;">GeM cataloging, rate contracts &amp; EMD/PBG instrument tracking.</span>
+          </div>
+          <div class="card" style="padding: 6pt;">
+            <strong>Growing SMEs</strong><br>
+            <span style="color:#6A7180;">Corporate websites, custom applications &amp; operational automation.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMBINED INTEGRATED SOLUTIONS -->
+      <div style="margin-bottom: 12pt;">
+        <h2 style="font-size: 11.5pt; border-bottom: 0.5pt solid #E0D8CB; padding-bottom: 2pt; margin-bottom: 6pt;">
+          Integrated Cross-Discipline Solutions
+        </h2>
+        <div class="grid-2">
+          <div style="font-size: 8pt; line-height: 1.35; padding: 6pt 8pt; background: #FAF7F2; border: 0.5pt solid #E0D8CB; border-radius: 3pt;">
+            <strong style="color: #191C21;">Digital Business Launch:</strong> Corporate website + enquiry routing + lead management automation + analytics setup.
+          </div>
+          <div style="font-size: 8pt; line-height: 1.35; padding: 6pt 8pt; background: #FAF7F2; border: 0.5pt solid #E0D8CB; border-radius: 3pt;">
+            <strong style="color: #191C21;">Tender Management System:</strong> Multi-portal discovery + cloud document vault + compliance checklists + milestone alerts.
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT & ENGAGEMENT BOX -->
+      <div style="background: #191C21; color: #FFFFFF; padding: 12pt 14pt; border-radius: 4pt;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5pt solid #3A404D; padding-bottom: 6pt; margin-bottom: 8pt;">
+          <div>
+            <div style="font-family: 'Newsreader', serif; font-style: italic; font-size: 14pt; font-weight: 500;">
+              Neudact Engineers
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; color: #E08A6E;">
+              Where Intelligence Meets Execution
+            </div>
+          </div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 7.5pt; color: #9DA5B4; text-align: right;">
+            DIRECT INQUIRY &amp; PROPOSALS
+          </div>
+        </div>
+
+        <div class="grid-3" style="font-family: 'JetBrains Mono', monospace; font-size: 7.5pt;">
+          <div>
+            <span style="color: #9DA5B4; display: block; font-size: 6.5pt; text-transform: uppercase;">Primary Email</span>
+            <span style="color: #FFFFFF; font-weight: 500;">shailinya.workspace@gmail.com</span>
+          </div>
+          <div>
+            <span style="color: #9DA5B4; display: block; font-size: 6.5pt; text-transform: uppercase;">Direct Phone / WhatsApp</span>
+            <span style="color: #FFFFFF; font-weight: 500;">+91 93542 49637</span>
+          </div>
+          <div>
+            <span style="color: #9DA5B4; display: block; font-size: 6.5pt; text-transform: uppercase;">Operating Base</span>
+            <span style="color: #FFFFFF;">Gurugram, Haryana, India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>NEUDACT ENGINEERS · GURUGRAM, HARYANA</span>
+      <span>CAPABILITIES PROFILE &amp; SERVICES BROCHURE</span>
+      <span>PAGE 03 / 03</span>
+    </div>
+  </div>
+
+</body>
+</html>

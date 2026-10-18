@@ -63,16 +63,16 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Right Action: Resume & Discuss Project */}
+          {/* Right Action: Brochure & Discuss Project */}
           <div className="hidden sm:flex items-center gap-2.5">
             <a
-              href="/Shailinya_Saxena_Resume.pdf"
-              download="Shailinya_Saxena_Resume.pdf"
+              href="/Neudact_Engineers_Capabilities_Brochure.pdf"
+              download="Neudact_Engineers_Capabilities_Brochure.pdf"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-mono text-[#575D6A] hover:text-[#191C21] hover:bg-[#F2ECE3] border border-[#DDD7CC] transition-colors"
-              title="Download Résumé (PDF)"
+              title="Download Capabilities Brochure (PDF)"
             >
               <FileText className="w-3.5 h-3.5 text-[#B84C2A]" />
-              <span>Résumé (PDF)</span>
+              <span>Brochure (PDF)</span>
             </a>
 
             <a
@@ -87,10 +87,10 @@ export default function Navbar() {
           {/* Mobile Menu Trigger */}
           <div className="flex items-center gap-2 xl:hidden">
             <a
-              href="/Shailinya_Saxena_Resume.pdf"
-              download="Shailinya_Saxena_Resume.pdf"
+              href="/Neudact_Engineers_Capabilities_Brochure.pdf"
+              download="Neudact_Engineers_Capabilities_Brochure.pdf"
               className="p-1.5 text-[#575D6A] border border-[#DDD7CC] rounded"
-              title="Download Résumé"
+              title="Download Capabilities Brochure (PDF)"
             >
               <FileText className="w-4 h-4 text-[#B84C2A]" />
             </a>

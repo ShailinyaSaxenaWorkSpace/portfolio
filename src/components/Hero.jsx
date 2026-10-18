@@ -104,13 +104,13 @@ export default function Hero({ onSelectService }) {
             </a>
 
             <a
-              href="/Shailinya_Saxena_Resume.pdf"
-              download="Shailinya_Saxena_Resume.pdf"
+              href="/Neudact_Engineers_Capabilities_Brochure.pdf"
+              download="Neudact_Engineers_Capabilities_Brochure.pdf"
               className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-mono text-[#575D6A] hover:text-[#B84C2A] transition-colors"
-              title="Download verified resume (PDF)"
+              title="Download Capabilities Brochure (PDF)"
             >
               <FileText className="w-3.5 h-3.5 text-[#B84C2A]" />
-              <span className="underline underline-offset-4">Download Résumé (PDF)</span>
+              <span className="underline underline-offset-4">Download Brochure (PDF)</span>
             </a>
           </div>
         </div>

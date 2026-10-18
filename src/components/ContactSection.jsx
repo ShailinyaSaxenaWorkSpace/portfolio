@@ -241,12 +241,12 @@ export default function ContactSection({ activeService }) {
               {/* Verified Professional Links */}
               <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono">
                 <a
-                  href="/Shailinya_Saxena_Resume.pdf"
-                  download="Shailinya_Saxena_Resume.pdf"
+                  href="/Neudact_Engineers_Capabilities_Brochure.pdf"
+                  download="Neudact_Engineers_Capabilities_Brochure.pdf"
                   className="inline-flex items-center gap-1.5 text-[#B84C2A] hover:underline"
                 >
                   <FileText className="w-3.5 h-3.5" />
-                  <span>Download Résumé (PDF)</span>
+                  <span>Download Brochure (PDF)</span>
                 </a>
 
                 <a

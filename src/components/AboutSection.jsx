@@ -54,7 +54,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Resume & Verification Footer */}
+        {/* Brochure & Verification Footer */}
         <div className="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-[#DFD8CC] text-xs font-mono text-[#5A606E]">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
@@ -62,13 +62,13 @@ export default function AboutSection() {
           </div>
 
           <a
-            href="/Shailinya_Saxena_Resume.pdf"
-            download="Shailinya_Saxena_Resume.pdf"
+            href="/Neudact_Engineers_Capabilities_Brochure.pdf"
+            download="Neudact_Engineers_Capabilities_Brochure.pdf"
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-white border border-[#DDD5C7] text-[#191C21] hover:text-[#B84C2A] hover:border-[#B84C2A] transition-colors"
-            title="Download verified professional resume (PDF)"
+            title="Download Neudact Engineers Capabilities Brochure (PDF)"
           >
             <FileText className="w-3.5 h-3.5 text-[#B84C2A]" />
-            <span>Download Résumé (PDF)</span>
+            <span>Download Brochure (PDF)</span>
           </a>
         </div>
 
