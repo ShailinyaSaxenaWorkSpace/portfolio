@@ -54,6 +54,7 @@ export default function ContactSection({ activeService }) {
 
   const directEmail = 'neudact@gmail.com';
   const directPhone = '+91 93542 49637';
+  const web3FormsKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || '';
 
   const copyEmail = () => {
     navigator.clipboard.writeText(directEmail);
@@ -101,36 +102,60 @@ export default function ContactSection({ activeService }) {
     setActivationNotice(false);
 
     try {
-      // 1. Direct email forwarding to neudact@gmail.com via FormSubmit.co
-      const emailPayload = {
-        _subject: `New Requirement: ${currentService} — ${formData.name}`,
-        _template: 'table',
-        _captcha: 'false',
-        Name: formData.name,
-        Company: formData.company || 'Not Specified',
-        Email: formData.email,
-        Phone: formData.phone || 'Not Specified',
-        Service: currentService,
-        Budget: formData.budget || 'Not Specified',
-        Timeline: formData.timeline || 'Not Specified',
-        Details: formData.message
-      };
+      if (web3FormsKey) {
+        // Preferred: Direct delivery via Web3Forms (No activation link required)
+        await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: web3FormsKey,
+            subject: `New Requirement [${currentService}] — ${formData.name}`,
+            from_name: 'Neudact Engineers Website',
+            Name: formData.name,
+            Company: formData.company || 'Not Specified',
+            Email: formData.email,
+            Phone: formData.phone || 'Not Specified',
+            Service: currentService,
+            Budget: formData.budget || 'Not Specified',
+            Timeline: formData.timeline || 'Not Specified',
+            Details: formData.message
+          })
+        });
+      } else {
+        // Fallback: Direct email forwarding to neudact@gmail.com via FormSubmit.co
+        const emailPayload = {
+          _subject: `New Requirement: ${currentService} — ${formData.name}`,
+          _template: 'table',
+          _captcha: 'false',
+          Name: formData.name,
+          Company: formData.company || 'Not Specified',
+          Email: formData.email,
+          Phone: formData.phone || 'Not Specified',
+          Service: currentService,
+          Budget: formData.budget || 'Not Specified',
+          Timeline: formData.timeline || 'Not Specified',
+          Details: formData.message
+        };
 
-      const response = await fetch('https://formsubmit.co/ajax/neudact@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(emailPayload)
-      });
+        const response = await fetch('https://formsubmit.co/ajax/neudact@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(emailPayload)
+        });
 
-      const result = await response.json().catch(() => null);
-      if (result && result.message && result.message.includes('Activation')) {
-        setActivationNotice(true);
+        const result = await response.json().catch(() => null);
+        if (result && result.message && result.message.includes('Activation')) {
+          setActivationNotice(true);
+        }
       }
 
-      // 2. Netlify static form fallback
+      // Netlify static form fallback
       try {
         const netlifyPayload = new URLSearchParams({
           'form-name': 'contact',
