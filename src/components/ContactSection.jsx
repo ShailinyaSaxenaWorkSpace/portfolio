@@ -16,7 +16,7 @@ const SERVICE_OPTIONS = [
 
 const BUDGET_OPTIONS = [
   'Select a budget range (optional)',
-  'Under ₹1,00,000 / $1,200',
+  'Under ₹1,00,000',
   '₹1,00,000 – ₹3,00,000',
   '₹3,00,000 – ₹10,00,000',
   '₹10,00,000+ / Custom Retainer',
@@ -49,6 +49,7 @@ export default function ContactSection({ activeService }) {
   const [copiedMsg, setCopiedMsg] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [activationNotice, setActivationNotice] = useState(false);
   const [errors, setErrors] = useState({});
 
   const directEmail = 'neudact@gmail.com';
@@ -97,23 +98,58 @@ export default function ContactSection({ activeService }) {
     if (!validate()) return;
 
     setIsSubmitting(true);
+    setActivationNotice(false);
 
     try {
-      // Submit to Netlify Forms backend
-      const payload = new URLSearchParams({
-        'form-name': 'contact',
-        ...formData,
-        service: currentService
-      }).toString();
+      // 1. Direct email forwarding to neudact@gmail.com via FormSubmit.co
+      const emailPayload = {
+        _subject: `New Requirement: ${currentService} — ${formData.name}`,
+        _template: 'table',
+        _captcha: 'false',
+        Name: formData.name,
+        Company: formData.company || 'Not Specified',
+        Email: formData.email,
+        Phone: formData.phone || 'Not Specified',
+        Service: currentService,
+        Budget: formData.budget || 'Not Specified',
+        Timeline: formData.timeline || 'Not Specified',
+        Details: formData.message
+      };
 
-      await fetch('/', {
+      const response = await fetch('https://formsubmit.co/ajax/neudact@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: payload
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(emailPayload)
       });
+
+      const result = await response.json().catch(() => null);
+      if (result && result.message && result.message.includes('Activation')) {
+        setActivationNotice(true);
+      }
+
+      // 2. Netlify static form fallback
+      try {
+        const netlifyPayload = new URLSearchParams({
+          'form-name': 'contact',
+          ...formData,
+          service: currentService
+        }).toString();
+
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: netlifyPayload
+        });
+      } catch {
+        // Safe to ignore in non-Netlify environments
+      }
+
       setSubmitted(true);
     } catch (err) {
-      console.warn('Form submission finished with client confirmation:', err);
+      console.warn('Form submission handled with direct client fallbacks:', err);
       setSubmitted(true);
     } finally {
       setIsSubmitting(false);
@@ -286,6 +322,12 @@ export default function ContactSection({ activeService }) {
                 <p className="text-sm text-[#4E5564] leading-relaxed">
                   Thank you for contacting Neudact Engineers, <strong>{formData.name}</strong>. Your inquiry regarding <strong>{currentService}</strong> has been recorded. We will review your requirements and respond within 24 business hours.
                 </p>
+
+                {activationNotice && (
+                  <div className="p-3.5 bg-amber-50 border-l-2 border-amber-600 rounded-r text-xs text-amber-900 leading-relaxed font-sans">
+                    <strong>One-Time Email Activation:</strong> FormSubmit has sent a one-time activation email to <strong>neudact@gmail.com</strong>. Please check your inbox (or Spam folder) and click the confirmation link to authorize automatic email forwarding.
+                  </div>
+                )}
 
                 <div className="p-4 bg-[#FAF7F2] border border-[#E0D8CB] rounded space-y-3 font-mono text-xs">
                   <div className="flex items-center justify-between">
