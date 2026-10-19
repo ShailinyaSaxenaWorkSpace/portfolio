@@ -51,7 +51,7 @@ export default function ContactSection({ activeService }) {
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
 
-  const directEmail = 'shailinya.workspace@gmail.com';
+  const directEmail = 'neudact@gmail.com';
   const directPhone = '+91 93542 49637';
 
   const copyEmail = () => {

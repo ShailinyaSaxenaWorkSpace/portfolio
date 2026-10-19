@@ -55,8 +55,8 @@ export default function Footer() {
             </span>
             <ul className="space-y-1.5 text-[#5A606E]">
               <li>
-                <a href="mailto:shailinya.workspace@gmail.com" className="hover:text-[#191C21] underline underline-offset-2">
-                  shailinya.workspace@gmail.com
+                <a href="mailto:neudact@gmail.com" className="hover:text-[#191C21] underline underline-offset-2">
+                  neudact@gmail.com
                 </a>
               </li>
               <li>
