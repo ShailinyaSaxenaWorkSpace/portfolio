@@ -25,7 +25,7 @@ export default function Footer() {
               Where Intelligence Meets Execution.
             </p>
             <p className="text-xs text-[#525966] max-w-sm leading-relaxed">
-              From professional websites and custom business software to complete tender-management support and AI-powered automation, Neudact Engineers helps businesses turn complex requirements into practical solutions.
+              An engineering and technology solutions partner providing direct digital services, project coordination, product sourcing, and specialist partner-delivered solutions for businesses, infrastructure companies, EPC contractors, and government-facing organizations.
             </p>
             <p className="font-mono text-[11px] text-[#7A8190] pt-1">
               Gurugram, Haryana, India (IST / UTC+5:30)
@@ -34,18 +34,17 @@ export default function Footer() {
 
           <div className="sm:col-span-3 space-y-2 font-mono text-[11px]">
             <span className="text-[#191C21] font-semibold block uppercase tracking-wider">
-              Service Divisions
+              Navigation
             </span>
             <ul className="space-y-1.5 text-[#5A606E]">
-              <li><a href="#websites" className="hover:text-[#191C21]">Website Development</a></li>
-              <li><a href="#tender-management" className="hover:text-[#191C21]">Tender Management</a></li>
-              <li><a href="#custom-software" className="hover:text-[#191C21]">Custom Software</a></li>
-              <li><a href="#ai-automation" className="hover:text-[#191C21]">AI &amp; Automation</a></li>
-              <li><a href="#combined-solutions" className="hover:text-[#191C21]">Combined Solutions</a></li>
+              <li><a href="#solutions" className="hover:text-[#191C21]">Core Solutions</a></li>
+              <li><a href="#products" className="hover:text-[#191C21]">Featured Products</a></li>
+              <li><a href="#delivery-model" className="hover:text-[#191C21]">Delivery Model</a></li>
               <li><a href="#industries" className="hover:text-[#191C21]">Target Industries</a></li>
               <li><a href="#work" className="hover:text-[#191C21]">Selected Work</a></li>
+              <li><a href="#why-neudact" className="hover:text-[#191C21]">Why Neudact</a></li>
               <li><a href="#about" className="hover:text-[#191C21]">About Neudact</a></li>
-              <li><a href="#contact" className="hover:text-[#191C21]">Discuss a Project</a></li>
+              <li><a href="#contact" className="hover:text-[#191C21]">Discuss Requirement</a></li>
             </ul>
           </div>
 

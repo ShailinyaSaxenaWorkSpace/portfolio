@@ -90,11 +90,77 @@
   color: #7A8190;
 }
 
+/* ------------------------------------------------------------- */
+/* Lightweight 3D Depth & Perspective System (Zero JS Overhead)  */
+/* ------------------------------------------------------------- */
+.perspective-container {
+  perspective: 1200px;
+  perspective-origin: center center;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.depth-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .depth-card:hover {
+    transform: translateY(-4px) translateZ(12px) rotateX(1.5deg);
+    box-shadow: 0 16px 32px -8px rgba(25, 28, 33, 0.09), 0 4px 12px -2px rgba(25, 28, 33, 0.04);
+  }
+}
+
+.depth-layer-front {
+  transform: translateZ(18px);
+}
+
+.depth-layer-base {
+  transform: translateZ(6px);
+}
+
+/* Subtle engineering blueprint grid pattern */
+.bg-blueprint-grid {
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(230, 224, 213, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(230, 224, 213, 0.45) 1px, transparent 1px);
+}
+
+.bg-dot-grid {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, #D8D1C2 1.2px, transparent 1.2px);
+}
+
+/* Delivery badge styling */
+.badge-direct {
+  background-color: #EBF3ED;
+  color: #1E6B37;
+  border: 1px solid #C4DFC9;
+}
+
+.badge-partner {
+  background-color: #EFF4FA;
+  color: #1A549E;
+  border: 1px solid #BFD5F2;
+}
+
+.badge-sourced {
+  background-color: #FAF2EC;
+  color: #A34E1A;
+  border: 1px solid #EDD2BE;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    transform: none !important;
   }
 }

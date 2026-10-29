@@ -14,13 +14,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Websites', href: '#websites' },
-    { name: 'Tender Management', href: '#tender-management' },
-    { name: 'Custom Software', href: '#custom-software' },
-    { name: 'AI & Automation', href: '#ai-automation' },
-    { name: 'Combined', href: '#combined-solutions' },
+    { name: 'Solutions', href: '#solutions' },
+    { name: 'Featured Products', href: '#products' },
+    { name: 'Delivery Model', href: '#delivery-model' },
     { name: 'Industries', href: '#industries' },
     { name: 'Portfolio', href: '#work' },
+    { name: 'Why Neudact', href: '#why-neudact' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ];

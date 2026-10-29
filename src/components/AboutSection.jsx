@@ -20,10 +20,10 @@ export default function AboutSection() {
         {/* Core Narrative */}
         <div className="space-y-5 text-base sm:text-lg text-[#3E4554] leading-relaxed">
           <p>
-            Neudact Engineers works at the intersection of technology, tender management, and business operations. We help businesses build their digital presence, navigate tender requirements, develop custom software, and automate repetitive workflows with practical AI-powered solutions.
+            Neudact Engineers is an engineering and technology solutions partner providing direct digital services, project coordination, product sourcing, and specialist partner-delivered solutions for businesses, infrastructure companies, EPC contractors, and government-facing organizations.
           </p>
           <p className="text-sm sm:text-base text-[#525966]">
-            Whether you are an EPC contractor participating in government tenders or a growing enterprise looking to streamline internal operations with custom software and automation, we provide disciplined analysis, transparent processes, and dependable technical execution.
+            Whether you need end-to-end tender compliance support, high-performance web platforms, solar plant schematics coordinated through certified engineering partners, or specialized industrial CCTV and drone sourcing, we provide disciplined analysis, transparent delivery models, and dependable execution.
           </p>
         </div>
 

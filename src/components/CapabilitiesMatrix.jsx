@@ -90,7 +90,7 @@ export default function CapabilitiesMatrix() {
           </div>
           <div className="lg:col-span-7 flex items-end">
             <p className="text-sm sm:text-base text-[#525966] leading-relaxed max-w-xl">
-              An inventory of core programming languages, frameworks, data tools, and public-procurement systems I work with on production deliverables.
+              An inventory of core programming languages, frameworks, data tools, and public-procurement systems Neudact Engineers deploys across production deliverables.
             </p>
           </div>
         </div>

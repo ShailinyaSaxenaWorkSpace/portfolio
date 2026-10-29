@@ -174,7 +174,7 @@ export default function WorkShowcase() {
           {filteredProjects.map((project, idx) => (
             <div
               key={project.id}
-              className="p-6 sm:p-8 lg:p-10 bg-white border border-[#E0D8CB] rounded-lg space-y-6"
+              className="p-6 sm:p-8 lg:p-10 bg-white border border-[#E0D8CB] rounded-lg space-y-6 depth-card shadow-[0_4px_16px_rgba(25,28,33,0.03)]"
             >
               {/* Meta Bar */}
               <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#EAE4D9]">

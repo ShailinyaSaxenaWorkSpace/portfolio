@@ -3,14 +3,14 @@ import { Send, Check, Copy, FileText, CheckCircle2, ExternalLink, Loader2 } from
 import { GithubIcon, LinkedinIcon } from './Icons';
 
 const SERVICE_OPTIONS = [
-  'Website Development',
-  'Custom Software Development',
-  'Tender Discovery & Screening',
-  'End-to-End Tender Management',
-  'Bid Documentation & Submission Support',
-  'Custom AI Agent Development',
-  'Business Automation',
-  'Combined Services',
+  'Tender Management & Procurement Support',
+  'Solar & Renewable Energy Solutions',
+  'Security, CCTV & VMS',
+  'Networking & Telecom Infrastructure',
+  'Drone & UAV Solutions',
+  'Indigenous Defence & Engineering Solutions',
+  'Software, Web Development & Automation',
+  'Multi-Disciplinary / Turnkey Project',
   'Other'
 ];
 
@@ -33,7 +33,7 @@ const TIMELINE_OPTIONS = [
 
 export default function ContactSection({ activeService }) {
   const [selectedService, setSelectedService] = useState(null);
-  const currentService = selectedService ?? (activeService && SERVICE_OPTIONS.includes(activeService) ? activeService : 'End-to-End Tender Management');
+  const currentService = selectedService ?? (activeService && SERVICE_OPTIONS.includes(activeService) ? activeService : 'Tender Management & Procurement Support');
 
   const [formData, setFormData] = useState({
     name: '',
