@@ -1,14 +1,16 @@
 import React from 'react';
 import { ArrowUp, FileText } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
+import { SERVICE_PAGES } from '../data/servicePagesData';
 
 const CURRENT_YEAR = new Date().getFullYear();
 
-export default function Footer() {
-
+export default function Footer({ onNavigateService }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const serviceKeys = Object.keys(SERVICE_PAGES);
 
   return (
     <footer className="py-14 sm:py-16 bg-[#F4EFEA] border-t border-[#E6E0D5] text-[#5A606E] text-xs">
@@ -17,7 +19,8 @@ export default function Footer() {
         {/* Main Footer Row */}
         <div className="grid sm:grid-cols-12 gap-8 pb-10 border-b border-[#DFD7CB]">
           
-          <div className="sm:col-span-5 space-y-2.5">
+          {/* Identity & Company Summary */}
+          <div className="sm:col-span-4 space-y-2.5">
             <p className="font-serif italic font-semibold text-base text-[#191C21]">
               Neudact Engineers
             </p>
@@ -32,23 +35,30 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="sm:col-span-3 space-y-2 font-mono text-[11px]">
+          {/* Dedicated Service Pages Directory for Search & AI Indexing */}
+          <div className="sm:col-span-5 space-y-2 font-mono text-[11px]">
             <span className="text-[#191C21] font-semibold block uppercase tracking-wider">
-              Navigation
+              Service Directory &amp; Specifications
             </span>
-            <ul className="space-y-1.5 text-[#5A606E]">
-              <li><a href="#solutions" className="hover:text-[#191C21]">Core Solutions</a></li>
-              <li><a href="#products" className="hover:text-[#191C21]">Featured Products</a></li>
-              <li><a href="#delivery-model" className="hover:text-[#191C21]">Delivery Model</a></li>
-              <li><a href="#industries" className="hover:text-[#191C21]">Target Industries</a></li>
-              <li><a href="#work" className="hover:text-[#191C21]">Selected Work</a></li>
-              <li><a href="#why-neudact" className="hover:text-[#191C21]">Why Neudact</a></li>
-              <li><a href="#about" className="hover:text-[#191C21]">About Neudact</a></li>
-              <li><a href="#contact" className="hover:text-[#191C21]">Discuss Requirement</a></li>
+            <ul className="grid grid-cols-1 gap-1 text-[#5A606E]">
+              {serviceKeys.map((key) => {
+                const s = SERVICE_PAGES[key];
+                return (
+                  <li key={key}>
+                    <button
+                      onClick={() => onNavigateService && onNavigateService(key)}
+                      className="text-left hover:text-[#191C21] hover:underline cursor-pointer transition-colors truncate max-w-xs block"
+                    >
+                      {s.h1}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
-          <div className="sm:col-span-4 space-y-2 font-mono text-[11px]">
+          {/* Quick Direct Contacts & Profiles */}
+          <div className="sm:col-span-3 space-y-2 font-mono text-[11px]">
             <span className="text-[#191C21] font-semibold block uppercase tracking-wider">
               Direct &amp; Verification
             </span>
@@ -93,7 +103,7 @@ export default function Footer() {
                   title="Download Capabilities Brochure (PDF)"
                 >
                   <FileText className="w-3.5 h-3.5" />
-                  <span>Download Brochure (PDF)</span>
+                  <span>Capabilities Brochure (PDF)</span>
                 </a>
               </li>
             </ul>
@@ -101,19 +111,22 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono text-[#7A8190]">
-          <p>
-            &copy; {CURRENT_YEAR} Neudact Engineers. All rights reserved.
-          </p>
+        {/* Bottom Legal, Slogan & Scroll-to-Top */}
+        <div className="pt-6 flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] text-[#7A8190]">
+          <div>
+            &copy; {CURRENT_YEAR} Neudact Engineers. Operational Base: Gurugram, Haryana, India. All rights reserved.
+          </div>
 
-          <button
-            onClick={scrollToTop}
-            className="inline-flex items-center gap-1 text-[#5A606E] hover:text-[#191C21] transition-colors"
-          >
-            <span>Back to top</span>
-            <ArrowUp className="w-3 h-3" />
-          </button>
+          <div className="flex items-center gap-4">
+            <span className="hidden md:inline-block">Disciplined Engineering &amp; Procurement Execution</span>
+            <button
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-1 text-[#191C21] hover:text-[#B84C2A] transition-colors cursor-pointer"
+            >
+              <span>Back to Top</span>
+              <ArrowUp className="w-3 h-3" />
+            </button>
+          </div>
         </div>
 
       </div>

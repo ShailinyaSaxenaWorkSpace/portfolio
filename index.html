@@ -20,28 +20,50 @@
     <meta property="og:description" content="Where Intelligence Meets Execution. Engineering, procurement support, solar schematics, security systems, and custom software automation." />
     <meta property="og:image" content="/favicon.svg" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data: Organization & WebSite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Neudact Engineers",
-      "url": "https://neudact-engineers.vercel.app/",
-      "logo": "https://neudact-engineers.vercel.app/favicon.svg",
-      "slogan": "Where Intelligence Meets Execution",
-      "description": "An engineering and technology solutions partner providing direct digital services, project coordination, product sourcing, and specialist partner-delivered solutions.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Gurugram",
-        "addressRegion": "Haryana",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9354249637",
-        "contactType": "Customer Support",
-        "email": "neudact@gmail.com"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://neudact-engineers.vercel.app/#organization",
+          "name": "Neudact Engineers",
+          "url": "https://neudact-engineers.vercel.app/",
+          "logo": "https://neudact-engineers.vercel.app/favicon.svg",
+          "slogan": "Where Intelligence Meets Execution",
+          "description": "An engineering and technology solutions partner providing direct digital services, project coordination, product sourcing, and specialist partner-delivered solutions for businesses, infrastructure companies, EPC contractors, and government-facing organizations.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gurugram",
+            "addressRegion": "Haryana",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9354249637",
+            "contactType": "Customer Support",
+            "email": "neudact@gmail.com",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/shailinya-saxena-%F0%9F%87%AE%F0%9F%87%B3-270b35208",
+            "https://github.com/ShailinyaSaxenaWorkSpace"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://neudact-engineers.vercel.app/#website",
+          "url": "https://neudact-engineers.vercel.app/",
+          "name": "Neudact Engineers",
+          "description": "Technology, Engineering & Infrastructure Solutions Partner",
+          "publisher": {
+            "@id": "https://neudact-engineers.vercel.app/#organization"
+          },
+          "inLanguage": "en-IN"
+        }
+      ]
     }
     </script>
 

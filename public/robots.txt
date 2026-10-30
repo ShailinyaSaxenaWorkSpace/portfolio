@@ -1,0 +1,39 @@
+# robots.txt for Neudact Engineers (https://neudact-engineers.vercel.app/)
+# Optimization for standard search crawlers, AI search assistants & indexers
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+# Explicitly allow leading Search and AI Search crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# OpenAI SearchBot (real-time conversational search indexing)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Perplexity AI search crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Claude / Anthropic search crawler
+User-agent: Claude-Web
+Allow: /
+
+# GPTBot (OpenAI Training Crawler) - Disallow model retraining if preferred, keep searchbot open
+User-agent: GPTBot
+Disallow: /
+
+# Canonical XML Sitemap
+Sitemap: https://neudact-engineers.vercel.app/sitemap.xml

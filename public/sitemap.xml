@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Primary Landing Page -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Dedicated Service 1: Tender Management & Procurement Support -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/services/tender-management-india</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dedicated Service 2: Railway Tender Documentation & IREPS Support -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/services/railway-tender-ireps-support</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dedicated Service 3: Custom Software Development -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/services/custom-software-development</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dedicated Service 4: Business Process Automation & AI Solutions -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/services/business-process-automation-ai</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dedicated Service 5: Solar Plant SLD Design & Equipment Sourcing -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/services/solar-plant-sld-design-sourcing</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dedicated Service 6: Telecom & Networking Solutions -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/services/telecom-networking-solutions</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Dedicated Service 7: CCTV & Video Management Systems -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/services/cctv-vms-surveillance-solutions</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Dedicated Service 8: Commercial Drone & UAV Solutions -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/services/drone-uav-solutions</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Dedicated Service 9: Engineering and Infrastructure Solutions -->
+  <url>
+    <loc>https://neudact-engineers.vercel.app/services/engineering-infrastructure-solutions</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

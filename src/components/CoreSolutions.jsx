@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { 
   ArrowRight, CheckCircle2, ShieldAlert, Cpu, Sun, Radio, 
-  Network, Layers 
+  Network, Layers, FileText 
 } from 'lucide-react';
 
-export default function CoreSolutions({ onSelectService }) {
+export default function CoreSolutions({ onSelectService, onNavigateService }) {
   const [activeTab, setActiveTab] = useState('all');
 
   const handleDiscuss = (serviceName) => {
@@ -14,6 +14,12 @@ export default function CoreSolutions({ onSelectService }) {
     const target = document.getElementById('contact');
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleViewDetails = (slug) => {
+    if (onNavigateService) {
+      onNavigateService(slug);
     }
   };
 
@@ -41,7 +47,7 @@ export default function CoreSolutions({ onSelectService }) {
           </h2>
           
           <p className="text-base text-[#525966] leading-relaxed font-sans">
-            Neudact Engineers delivers precision across software development, public procurement, solar engineering, and infrastructure technology. Every offering is accompanied by a transparent delivery model label.
+            Neudact Engineers delivers precision across software development, public procurement, solar engineering, and infrastructure technology. Every offering is accompanied by a transparent delivery model label and dedicated technical specification page.
           </p>
         </div>
 
@@ -115,13 +121,22 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Software, Web Development & Automation')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Request Web Platform Quote</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('custom-software-development')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Read Specs</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Software, Web Development & Automation')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Get Quote</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Offering 1.2 */}
@@ -152,13 +167,22 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Software, Web Development & Automation')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Discuss Software Architecture</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('custom-software-development')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Custom Software Development')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Discuss Architecture</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Offering 1.3 */}
@@ -189,13 +213,22 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Software, Web Development & Automation')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Automate Your Workflows</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('business-process-automation-ai')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Software, Web Development & Automation')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Automate Workflows</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
               </div>
@@ -248,13 +281,22 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Tender Management & Procurement Support')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Configure Tender Tracking</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('tender-management-india')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Tender Management & Procurement Support')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Configure Tracking</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Offering 2.2 */}
@@ -281,24 +323,33 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Tender Management & Procurement Support')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Review Tender Eligibility</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('tender-management-india')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Tender Management & Procurement Support')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Review Eligibility</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Offering 2.3 */}
                 <div className="p-6 bg-white border border-[#E0D8CB] rounded-lg depth-card flex flex-col justify-between">
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-mono font-bold text-[#B84C2A]">02.3 / HARVESTER</span>
+                      <span className="text-[11px] font-mono font-bold text-[#B84C2A]">02.3 / RAILWAYS</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-direct font-medium">Proprietary Tool</span>
                     </div>
                     <h4 className="font-serif text-lg font-medium text-[#191C21]">
-                      IREPS Harvester &amp; Excel Analysis
+                      Railway Tenders &amp; IREPS Harvester
                     </h4>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Automated railway document collector, file download verification, BOQ item pricing comparisons, and multi-round bidding simulations.
@@ -314,13 +365,22 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Tender Management & Procurement Support')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Request Harvester Demo</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('railway-tender-ireps-support')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Tender Management & Procurement Support')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Request Harvester Demo</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
               </div>
@@ -373,13 +433,22 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Solar & Renewable Energy Solutions')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#1A549E] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Request SLD Design Details</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('solar-plant-sld-design-sourcing')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Solar & Renewable Energy Solutions')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#1A549E] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Request SLD Details</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Offering 3.2 */}
@@ -406,13 +475,22 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Solar & Renewable Energy Solutions')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#1A549E] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Source Solar Components</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('solar-plant-sld-design-sourcing')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Solar & Renewable Energy Solutions')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#1A549E] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Source Components</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Offering 3.3 */}
@@ -439,13 +517,22 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Networking & Telecom Infrastructure')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#1A549E] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Plan Telecom Infrastructure</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('telecom-networking-solutions')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Networking & Telecom Infrastructure')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#1A549E] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Plan Telecom Links</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
               </div>
@@ -498,13 +585,22 @@ export default function CoreSolutions({ onSelectService }) {
                       </li>
                     </ul>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Security, CCTV & VMS')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#A34E1A] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Inquire CCTV Solutions</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('cctv-vms-surveillance-solutions')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Security, CCTV & VMS')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#A34E1A] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Inquire CCTV</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Offering 4.2 */}
@@ -524,16 +620,25 @@ export default function CoreSolutions({ onSelectService }) {
                     {/* Mandatory Compliance Notice */}
                     <div className="p-2.5 rounded bg-[#FAF2EC] border border-[#EDD2BE] text-[11px] text-[#A34E1A] flex items-start gap-2">
                       <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5" />
-                      <span><strong>Statutory Notice:</strong> Availability, supply, and deployment depend on product specifications, partner capabilities, and applicable statutory approvals (DGCA/MoCA).</span>
+                      <span><strong>Statutory Notice:</strong> Subject to DGCA approvals and product specifications.</span>
                     </div>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Drone & UAV Solutions')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#A34E1A] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Check UAV Feasibility</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('drone-uav-solutions')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Drone & UAV Solutions')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#A34E1A] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Check Feasibility</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Offering 4.3 */}
@@ -553,16 +658,25 @@ export default function CoreSolutions({ onSelectService }) {
                     {/* Mandatory Compliance Notice */}
                     <div className="p-2.5 rounded bg-[#FAF2EC] border border-[#EDD2BE] text-[11px] text-[#A34E1A] flex items-start gap-2">
                       <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5" />
-                      <span><strong>Compliance Disclosure:</strong> Does not include controlled defence items or unverified defence-sector approvals. All regulated procurement subject to statutory compliance.</span>
+                      <span><strong>Disclosure:</strong> Excludes controlled items. Subject to statutory compliance.</span>
                     </div>
                   </div>
-                  <button
-                    onClick={() => handleDiscuss('Indigenous Defence & Engineering Solutions')}
-                    className="mt-6 pt-4 border-t border-[#EFE9DF] text-xs font-mono font-medium text-[#191C21] hover:text-[#A34E1A] flex items-center justify-between group cursor-pointer"
-                  >
-                    <span>Coordinate Engineering Project</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => handleViewDetails('engineering-infrastructure-solutions')}
+                      className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <FileText className="w-3 h-3 text-[#B84C2A]" />
+                      <span>Dedicated Page</span>
+                    </button>
+                    <button
+                      onClick={() => handleDiscuss('Indigenous Defence & Engineering Solutions')}
+                      className="text-xs font-mono font-medium text-[#191C21] hover:text-[#A34E1A] inline-flex items-center gap-1 group cursor-pointer"
+                    >
+                      <span>Coordinate Project</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
                 </div>
 
               </div>

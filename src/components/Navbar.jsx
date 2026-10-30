@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, Menu, X, FileText } from 'lucide-react';
 
-export default function Navbar() {
+export default function Navbar({ onNavigateHome, currentRoute }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -12,6 +12,26 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleLinkClick = (href) => {
+    setMobileMenuOpen(false);
+    if (currentRoute !== '/') {
+      onNavigateHome();
+      setTimeout(() => {
+        if (href.startsWith('#')) {
+          const targetId = href.replace('#', '');
+          const el = document.getElementById(targetId);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+    } else {
+      if (href.startsWith('#')) {
+        const targetId = href.replace('#', '');
+        const el = document.getElementById(targetId);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   const navLinks = [
     { name: 'Solutions', href: '#solutions' },
@@ -36,9 +56,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           
           {/* Identity */}
-          <a
-            href="#"
-            className="flex items-baseline gap-2 group text-[#191C21]"
+          <button
+            onClick={() => onNavigateHome()}
+            className="flex items-baseline gap-2 group text-[#191C21] cursor-pointer text-left"
             aria-label="Neudact Engineers - Home"
           >
             <span className="font-serif italic font-semibold text-lg sm:text-xl tracking-tight text-[#191C21]">
@@ -47,18 +67,18 @@ export default function Navbar() {
             <span className="hidden lg:inline-block font-mono text-[11px] text-[#7A8190] tracking-wide">
               / Where Intelligence Meets Execution
             </span>
-          </a>
+          </button>
 
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
-                className="text-xs font-medium tracking-wide text-[#575D6A] hover:text-[#191C21] transition-colors"
+                onClick={() => handleLinkClick(link.href)}
+                className="text-xs font-medium tracking-wide text-[#575D6A] hover:text-[#191C21] transition-colors cursor-pointer"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -74,13 +94,13 @@ export default function Navbar() {
               <span>Brochure (PDF)</span>
             </a>
 
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded text-xs font-medium text-white bg-[#191C21] hover:bg-[#2E333D] transition-colors"
+            <button
+              onClick={() => handleLinkClick('#contact')}
+              className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded text-xs font-medium text-white bg-[#191C21] hover:bg-[#2E333D] transition-colors cursor-pointer"
             >
               <span>Discuss Project</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#B84C2A]" />
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Trigger */}
@@ -110,25 +130,23 @@ export default function Navbar() {
         <div className="xl:hidden bg-[#FBF9F5] border-b border-[#E6E0D5] px-4 pt-4 pb-6 space-y-3">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-medium text-[#4E5564] hover:text-[#191C21] py-1 border-b border-[#F0EAE1]"
+                onClick={() => handleLinkClick(link.href)}
+                className="text-left text-sm font-medium text-[#4E5564] hover:text-[#191C21] py-1 border-b border-[#F0EAE1] cursor-pointer"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
           </nav>
           <div className="pt-2">
-            <a
-              href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-2 px-4 rounded text-xs font-semibold text-white bg-[#191C21] flex items-center justify-center gap-1"
+            <button
+              onClick={() => handleLinkClick('#contact')}
+              className="w-full py-2 px-4 rounded text-xs font-semibold text-white bg-[#191C21] flex items-center justify-center gap-1 cursor-pointer"
             >
               <span>Discuss a Requirement</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#B84C2A]" />
+            </button>
           </div>
         </div>
       )}
