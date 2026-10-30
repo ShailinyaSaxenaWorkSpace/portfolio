@@ -71,13 +71,8 @@ export default function Hero({ onSelectService }) {
         
         {/* Top Docket / Metadata Bar */}
         <div className="flex flex-wrap items-center justify-between gap-3 pb-8 mb-10 border-b border-[#EAE4D9] text-xs font-mono text-[#6A7180]">
-          <div className="flex items-center gap-2.5">
-            <img
-              src="/neudact-logo.png"
-              alt="Neudact Logo Mark"
-              className="h-6 w-auto object-contain"
-            />
-            <span className="text-[#A5ACB9]">/</span>
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#B84C2A] animate-pulse" />
             <span className="font-semibold text-[#191C21]">NEUDACT ENGINEERS</span>
             <span className="text-[#A5ACB9]">/</span>
             <span>WHERE INTELLIGENCE MEETS EXECUTION</span>
