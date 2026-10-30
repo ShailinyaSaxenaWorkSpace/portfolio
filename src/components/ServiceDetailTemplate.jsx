@@ -3,6 +3,7 @@ import {
   ArrowRight, CheckCircle2, FileText, 
   HelpCircle, ArrowLeft, Mail, ExternalLink, ShieldAlert 
 } from 'lucide-react';
+import { SITE_CONFIG } from '../config/siteConfig';
 
 export default function ServiceDetailTemplate({ service, onSelectService, onNavigateHome, onNavigateService }) {
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function ServiceDetailTemplate({ service, onSelectService, onNavi
     // Update canonical link
     let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical && service?.path) {
-      canonical.setAttribute('href', `https://neudact-engineers.vercel.app${service.path}`);
+      canonical.setAttribute('href', `${SITE_CONFIG.url}${service.path}`);
     }
   }, [service]);
 
@@ -61,15 +62,15 @@ export default function ServiceDetailTemplate({ service, onSelectService, onNavi
     "description": service.metaDescription,
     "provider": {
       "@type": "Organization",
-      "name": "Neudact Engineers",
-      "url": "https://neudact-engineers.vercel.app/",
-      "logo": "https://neudact-engineers.vercel.app/favicon.svg",
-      "telephone": "+91-9354249637",
-      "email": "neudact@gmail.com",
+      "name": SITE_CONFIG.name,
+      "url": `${SITE_CONFIG.url}/`,
+      "logo": SITE_CONFIG.logo,
+      "telephone": SITE_CONFIG.phone,
+      "email": SITE_CONFIG.email,
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Gurugram",
-        "addressRegion": "Haryana",
+        "addressLocality": SITE_CONFIG.address.addressLocality,
+        "addressRegion": SITE_CONFIG.address.addressRegion,
         "addressCountry": "IN"
       }
     },
@@ -78,7 +79,7 @@ export default function ServiceDetailTemplate({ service, onSelectService, onNavi
       "name": "India"
     },
     "serviceType": service.category,
-    "url": `https://neudact-engineers.vercel.app${service.path}`
+    "url": `${SITE_CONFIG.url}${service.path}`
   };
 
   const schemaBreadcrumbs = {
@@ -89,19 +90,19 @@ export default function ServiceDetailTemplate({ service, onSelectService, onNavi
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://neudact-engineers.vercel.app/"
+        "item": `${SITE_CONFIG.url}/`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://neudact-engineers.vercel.app/#solutions"
+        "item": `${SITE_CONFIG.url}/#solutions`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": service.h1,
-        "item": `https://neudact-engineers.vercel.app${service.path}`
+        "item": `${SITE_CONFIG.url}${service.path}`
       }
     ]
   };

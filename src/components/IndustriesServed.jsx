@@ -91,9 +91,9 @@ export default function IndustriesServed() {
                   <span className="w-1.5 h-1.5 rounded-full bg-[#191C21]" />
                 </div>
 
-                <h3 className="font-serif text-base font-medium text-[#191C21]">
+                <p className="font-serif text-base font-medium text-[#191C21]">
                   {ind.title}
-                </h3>
+                </p>
 
                 <p className="font-mono text-[11px] text-[#7A8190] leading-snug">
                   {ind.scope}

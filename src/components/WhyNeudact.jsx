@@ -55,9 +55,9 @@ export default function WhyNeudact() {
               <div className="p-2 w-fit rounded bg-[#FBF9F5] border border-[#EAE4D9]">
                 {item.icon}
               </div>
-              <h3 className="font-serif text-lg font-medium text-[#191C21]">
+              <p className="font-serif text-lg font-medium text-[#191C21]">
                 {item.title}
-              </h3>
+              </p>
               <p className="text-xs text-[#6A7180] leading-relaxed font-sans">
                 {item.description}
               </p>
@@ -69,9 +69,9 @@ export default function WhyNeudact() {
         <div className="mt-12 p-6 sm:p-8 rounded-lg bg-white border border-[#E0D8CB] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-1">
             <span className="text-[11px] font-mono font-bold text-[#B84C2A] uppercase">OUR PROMISE</span>
-            <h4 className="font-serif text-xl font-medium text-[#191C21]">
+            <p className="font-serif text-xl font-medium text-[#191C21]">
               Every requirement is assessed for real-world viability before quote issuance.
-            </h4>
+            </p>
             <p className="text-xs text-[#6A7180]">
               If a tender timeline is impossible or an engineering spec requires unavailable clearances, we tell you upfront.
             </p>

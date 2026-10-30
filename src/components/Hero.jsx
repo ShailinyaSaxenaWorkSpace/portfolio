@@ -139,7 +139,7 @@ export default function Hero({ onSelectService }) {
                 title="Download Capabilities Brochure (PDF)"
               >
                 <FileText className="w-3.5 h-3.5 text-[#B84C2A]" />
-                <span className="underline underline-offset-4">Brochure (PDF)</span>
+                <span className="underline underline-offset-4">Capabilities Brochure (PDF)</span>
               </a>
             </div>
 
@@ -264,9 +264,9 @@ export default function Hero({ onSelectService }) {
                 <span className="font-mono text-xs font-bold text-[#B84C2A]">01 / DIGITAL</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#9AA0AC] group-hover:text-[#191C21] group-hover:translate-x-0.5 transition-all" />
               </div>
-              <h3 className="font-serif text-base font-medium text-[#191C21] group-hover:text-[#B84C2A] transition-colors">
+              <p className="font-serif text-base font-medium text-[#191C21] group-hover:text-[#B84C2A] transition-colors">
                 Technology &amp; Digital Solutions
-              </h3>
+              </p>
               <p className="text-xs text-[#6A7180] leading-relaxed">
                 Websites, custom SaaS tools, AI workflow automations &amp; data integration pipelines.
               </p>
@@ -282,9 +282,9 @@ export default function Hero({ onSelectService }) {
                 <span className="font-mono text-xs font-bold text-[#B84C2A]">02 / PROCUREMENT</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#9AA0AC] group-hover:text-[#191C21] group-hover:translate-x-0.5 transition-all" />
               </div>
-              <h3 className="font-serif text-base font-medium text-[#191C21] group-hover:text-[#B84C2A] transition-colors">
+              <p className="font-serif text-base font-medium text-[#191C21] group-hover:text-[#B84C2A] transition-colors">
                 Tender &amp; Procurement Support
-              </h3>
+              </p>
               <p className="text-xs text-[#6A7180] leading-relaxed">
                 Eligibility audit, bid document preparation, Excel pricing review &amp; IREPS Tender Harvester.
               </p>
@@ -300,9 +300,9 @@ export default function Hero({ onSelectService }) {
                 <span className="font-mono text-xs font-bold text-[#1A549E]">03 / ENERGY</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#9AA0AC] group-hover:text-[#191C21] group-hover:translate-x-0.5 transition-all" />
               </div>
-              <h3 className="font-serif text-base font-medium text-[#191C21] group-hover:text-[#1A549E] transition-colors">
+              <p className="font-serif text-base font-medium text-[#191C21] group-hover:text-[#1A549E] transition-colors">
                 Solar &amp; Renewable Energy
-              </h3>
+              </p>
               <p className="text-xs text-[#6A7180] leading-relaxed">
                 Solar Single Line Diagrams (SLD) via licensed partners, BoS accessories &amp; telecom links.
               </p>
@@ -318,9 +318,9 @@ export default function Hero({ onSelectService }) {
                 <span className="font-mono text-xs font-bold text-[#A34E1A]">04 / SECURITY</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#9AA0AC] group-hover:text-[#191C21] group-hover:translate-x-0.5 transition-all" />
               </div>
-              <h3 className="font-serif text-base font-medium text-[#191C21] group-hover:text-[#A34E1A] transition-colors">
+              <p className="font-serif text-base font-medium text-[#191C21] group-hover:text-[#A34E1A] transition-colors">
                 Security, CCTV &amp; Emerging Tech
-              </h3>
+              </p>
               <p className="text-xs text-[#6A7180] leading-relaxed">
                 VMS surveillance, enterprise routing, commercial drone sourcing &amp; defence engineering.
               </p>

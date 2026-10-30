@@ -20,7 +20,7 @@ export default function AboutSection() {
         {/* Core Narrative */}
         <div className="space-y-5 text-base sm:text-lg text-[#3E4554] leading-relaxed">
           <p>
-            Neudact Engineers is an engineering and technology solutions partner providing direct digital services, project coordination, product sourcing, and specialist partner-delivered solutions for businesses, infrastructure companies, EPC contractors, and government-facing organizations.
+            Operating from Gurugram, Neudact Engineers bridges high-level technical architecture with ground-level contract execution. We empower Indian enterprises, civil infrastructure contractors, and technology teams to meet strict engineering standards and procurement deadlines without administrative drag.
           </p>
           <p className="text-sm sm:text-base text-[#525966]">
             Whether you need end-to-end tender compliance support, high-performance web platforms, solar plant schematics coordinated through certified engineering partners, or specialized industrial CCTV and drone sourcing, we provide disciplined analysis, transparent delivery models, and dependable execution.
@@ -33,9 +33,9 @@ export default function AboutSection() {
             <span className="font-mono text-xs font-bold text-[#B84C2A] block">
               DISCIPLINE IN COMPLIANCE
             </span>
-            <h3 className="font-serif text-base font-medium text-[#191C21]">
+            <p className="font-serif text-base font-medium text-[#191C21]">
               Strict Verification &amp; Accuracy
-            </h3>
+            </p>
             <p className="text-xs text-[#525966] leading-relaxed">
               Public procurement leaves zero margin for missing documents or clause ambiguities. We apply the same thoroughness to tender documentation that we apply to production software code.
             </p>
@@ -45,9 +45,9 @@ export default function AboutSection() {
             <span className="font-mono text-xs font-bold text-[#B84C2A] block">
               PRAGMATIC ENGINEERING
             </span>
-            <h3 className="font-serif text-base font-medium text-[#191C21]">
+            <p className="font-serif text-base font-medium text-[#191C21]">
               Solutions Built for Utility
-            </h3>
+            </p>
             <p className="text-xs text-[#525966] leading-relaxed">
               We build fast, reliable websites and business software without unnecessary complexity. Every feature is tied directly to solving a real operational bottleneck.
             </p>
@@ -65,10 +65,10 @@ export default function AboutSection() {
             href="/Neudact_Engineers_Capabilities_Brochure.pdf"
             download="Neudact_Engineers_Capabilities_Brochure.pdf"
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-white border border-[#DDD5C7] text-[#191C21] hover:text-[#B84C2A] hover:border-[#B84C2A] transition-colors"
-            title="Download Neudact Engineers Capabilities Brochure (PDF)"
+            title="Download Neudact Engineers Technical Capabilities Brochure (PDF)"
           >
             <FileText className="w-3.5 h-3.5 text-[#B84C2A]" />
-            <span>Download Brochure (PDF)</span>
+            <span>Download Technical Capabilities Brochure (PDF)</span>
           </a>
         </div>
 

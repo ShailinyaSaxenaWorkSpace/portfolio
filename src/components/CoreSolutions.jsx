@@ -100,9 +100,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#B84C2A]">01.1 / WEBSITES</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-direct font-medium">Direct Delivery</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Corporate &amp; Engineering Web Platforms
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       High-speed, SEO-optimized company portals, technical product catalogs, and bid presentation pages built with React and modern cloud architectures.
                     </p>
@@ -131,7 +131,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Read Specs</span>
+                      <span>Explore Web Platform Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Software, Web Development & Automation')}
@@ -150,9 +150,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#B84C2A]">01.2 / SOFTWARE</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-direct font-medium">Direct Delivery</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Custom Software &amp; Business Applications
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Internal operational dashboards, milestone tracking software, multi-site inventory tools, and lightweight enterprise ERP modules.
                     </p>
@@ -181,7 +181,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Custom Software Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Custom Software Development')}
@@ -200,9 +200,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#B84C2A]">01.3 / AI &amp; AUTOMATION</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-direct font-medium">Direct Delivery</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       AI Agents &amp; Workflow Automations
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Custom document parser bots, tender notification pipelines, Excel batch transformers, and automated customer follow-up systems.
                     </p>
@@ -231,7 +231,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Automation &amp; AI Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Software, Web Development & Automation')}
@@ -276,9 +276,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#B84C2A]">02.1 / RESEARCH</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-direct font-medium">Direct Delivery</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Tender Identification &amp; Research
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Daily tracking across IREPS, GeM, CPPP, State e-Procurement portals, and PSU noticeboards filtered by CPV, product code, and territory.
                     </p>
@@ -303,7 +303,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Tender Management Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Tender Management & Procurement Support')}
@@ -322,9 +322,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#B84C2A]">02.2 / COMPLIANCE</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-direct font-medium">Direct Delivery</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Eligibility Audit &amp; Bid Documentation
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Technical qualification cross-checks, financial turnover verification, credential compilation, and error-proof bid dossiers.
                     </p>
@@ -349,7 +349,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Bid Documentation Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Tender Management & Procurement Support')}
@@ -368,9 +368,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#B84C2A]">02.3 / RAILWAYS</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-direct font-medium">Proprietary Tool</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Railway Tenders &amp; IREPS Harvester
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Automated railway document collector, file download verification, BOQ item pricing comparisons, and multi-round bidding simulations.
                     </p>
@@ -395,7 +395,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Railway IREPS Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Tender Management & Procurement Support')}
@@ -440,9 +440,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#1A549E]">03.1 / DESIGN</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-partner font-medium">Specialist Partner</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Solar Plant SLD Design &amp; Schematics
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Single Line Diagrams (SLD), array layout schematics, string combiner calculations, and grid interconnection diagrams engineered through qualified electrical partners.
                     </p>
@@ -467,7 +467,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Solar SLD Design Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Solar & Renewable Energy Solutions')}
@@ -486,9 +486,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#1A549E]">03.2 / BALANCE OF SYSTEM</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-sourced font-medium">Sourced Solution</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       BoS Accessories &amp; Solar Equipment Sourcing
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Procurement coordination for DC cabling, AC/DC distribution boxes, surge protection devices, mounting structures, and inverter units from verified manufacturers.
                     </p>
@@ -513,7 +513,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Solar Equipment Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Solar & Renewable Energy Solutions')}
@@ -532,9 +532,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#1A549E]">03.3 / TELECOM &amp; FIBER</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-partner font-medium">Specialist Partner</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Networking &amp; Telecom Infrastructure
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Enterprise switching, routing, fiber-optic distribution (OFC), and plant SCADA connectivity executed through certified field network partners.
                     </p>
@@ -559,7 +559,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Telecom Network Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Networking & Telecom Infrastructure')}
@@ -604,9 +604,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#A34E1A]">04.1 / CCTV &amp; VMS</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-sourced font-medium">Sourced &amp; Partner</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Security, CCTV &amp; Video Management Systems
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Commercial IP surveillance cameras, central Video Management Systems (VMS), storage NVR/SAN arrays, and control room deployment coordination.
                     </p>
@@ -631,7 +631,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore CCTV &amp; VMS Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Security, CCTV & VMS')}
@@ -650,9 +650,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#A34E1A]">04.2 / UAV SYSTEMS</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-sourced font-medium">Sourced Solution</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Commercial Drone &amp; UAV Sourcing
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Sourcing and integration coordination for industrial inspection, volumetric surveying, agricultural mapping, and high-altitude monitoring UAVs.
                     </p>
@@ -673,7 +673,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Drone &amp; UAV Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Drone & UAV Solutions')}
@@ -692,9 +692,9 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       <span className="text-[11px] font-mono font-bold text-[#A34E1A]">04.3 / DEFENCE ENG.</span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded badge-partner font-medium">Specialist Partner</span>
                     </div>
-                    <h4 className="font-serif text-lg font-medium text-[#191C21]">
+                    <p className="font-serif text-lg font-medium text-[#191C21]">
                       Indigenous Defence &amp; Engineering Solutions
-                    </h4>
+                    </p>
                     <p className="text-xs text-[#6A7180] leading-relaxed">
                       Engineering requirement coordination, embedded electronics prototyping, ruggedized chassis sourcing, and sub-assembly development with verified technical partners.
                     </p>
@@ -715,7 +715,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
-                      <span>Dedicated Page</span>
+                      <span>Explore Infrastructure Specs</span>
                     </a>
                     <button
                       onClick={() => handleDiscuss('Indigenous Defence & Engineering Solutions')}

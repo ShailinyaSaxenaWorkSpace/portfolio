@@ -195,11 +195,13 @@ export default function WorkShowcase() {
                     <a
                       href={project.github}
                       target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-mono text-[#575D6A] hover:text-[#191C21]"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono text-[#575D6A] hover:text-[#191C21]"
+                      aria-label={`View ${project.title} on GitHub`}
+                      title={`View ${project.title} source code on GitHub`}
                     >
                       <GithubIcon className="w-3.5 h-3.5" />
-                      <span className="hidden sm:inline">Repo</span>
+                      <span className="hidden sm:inline">GitHub Code <span className="sr-only">({project.title})</span></span>
                     </a>
                   )}
                 </div>
@@ -208,9 +210,9 @@ export default function WorkShowcase() {
               {/* Title & Description Grid */}
               <div className="grid lg:grid-cols-12 gap-6 lg:gap-10">
                 <div className="lg:col-span-7 space-y-4">
-                  <h3 className="font-serif text-2xl font-medium text-[#191C21] tracking-tight">
+                  <p className="font-serif text-2xl font-medium text-[#191C21] tracking-tight">
                     {project.title}
-                  </h3>
+                  </p>
 
                   <div className="space-y-3 text-xs sm:text-[13px] leading-relaxed text-[#4E5564]">
                     <div>

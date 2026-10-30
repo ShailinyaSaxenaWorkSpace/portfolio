@@ -32,7 +32,7 @@ export default function Footer({ onNavigateService }) {
               Where Intelligence Meets Execution.
             </p>
             <p className="text-xs text-[#525966] max-w-sm leading-relaxed">
-              An engineering and technology solutions partner providing direct digital services, project coordination, product sourcing, and specialist partner-delivered solutions for businesses, infrastructure companies, EPC contractors, and government-facing organizations.
+              Delivering precision engineering schematics, turnkey public procurement support, custom software architecture, and industrial technology sourcing across India with complete delivery transparency.
             </p>
             <p className="font-mono text-[11px] text-[#7A8190] pt-1">
               Gurugram, Haryana, India (IST / UTC+5:30)
