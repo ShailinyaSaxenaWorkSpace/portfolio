@@ -55,17 +55,21 @@ export default function Navbar({ onNavigateHome, currentRoute }) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Identity */}
+          {/* Identity with Official Logo */}
           <button
             onClick={() => onNavigateHome()}
-            className="flex items-baseline gap-2 group text-[#191C21] cursor-pointer text-left"
+            className="flex items-center gap-3 group text-[#191C21] cursor-pointer text-left"
             aria-label="Neudact Engineers - Home"
           >
-            <span className="font-serif italic font-semibold text-lg sm:text-xl tracking-tight text-[#191C21]">
-              Neudact Engineers
-            </span>
-            <span className="hidden lg:inline-block font-mono text-[11px] text-[#7A8190] tracking-wide">
-              / Where Intelligence Meets Execution
+            <img
+              src="/neudact-logo.png"
+              alt="Neudact Engineers Logo"
+              className="h-8 sm:h-9 w-auto object-contain shrink-0"
+              width="180"
+              height="40"
+            />
+            <span className="hidden lg:inline-block font-mono text-[11px] text-[#7A8190] tracking-wide border-l border-[#DDD7CC] pl-3 py-1">
+              Where Intelligence Meets Execution
             </span>
           </button>
 

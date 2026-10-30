@@ -20,10 +20,14 @@ export default function Footer({ onNavigateService }) {
         <div className="grid sm:grid-cols-12 gap-8 pb-10 border-b border-[#DFD7CB]">
           
           {/* Identity & Company Summary */}
-          <div className="sm:col-span-4 space-y-2.5">
-            <p className="font-serif italic font-semibold text-base text-[#191C21]">
-              Neudact Engineers
-            </p>
+          <div className="sm:col-span-4 space-y-3">
+            <img
+              src="/neudact-logo.png"
+              alt="Neudact Engineers Logo"
+              className="h-9 w-auto object-contain"
+              width="180"
+              height="40"
+            />
             <p className="font-mono text-xs text-[#B84C2A]">
               Where Intelligence Meets Execution.
             </p>
