@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Check, Copy, FileText, CheckCircle2, ExternalLink, Loader2 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons';
 
 const SERVICE_OPTIONS = [
   'Tender Management & Procurement Support',
@@ -311,23 +311,36 @@ export default function ContactSection({ activeService }) {
                 </a>
 
                 <a
-                  href="https://github.com/ShailinyaSaxenaWorkSpace"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-[#575D6A] hover:text-[#191C21]"
-                >
-                  <GithubIcon className="w-3.5 h-3.5" />
-                  <span>GitHub</span>
-                </a>
-
-                <a
                   href="https://www.linkedin.com/in/shailinya-saxena-%F0%9F%87%AE%F0%9F%87%B3-270b35208"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Neudact Engineers on LinkedIn"
                   className="inline-flex items-center gap-1 text-[#575D6A] hover:text-[#191C21]"
                 >
                   <LinkedinIcon className="w-3.5 h-3.5 text-[#0A66C2]" />
                   <span>LinkedIn</span>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/neudact_engineers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Neudact Engineers on Instagram"
+                  className="inline-flex items-center gap-1 text-[#575D6A] hover:text-[#191C21]"
+                >
+                  <InstagramIcon className="w-3.5 h-3.5 text-[#E1306C]" />
+                  <span>Instagram</span>
+                </a>
+
+                <a
+                  href="https://github.com/ShailinyaSaxenaWorkSpace"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Neudact Engineers on GitHub"
+                  className="inline-flex items-center gap-1 text-[#575D6A] hover:text-[#191C21]"
+                >
+                  <GithubIcon className="w-3.5 h-3.5" />
+                  <span>GitHub</span>
                 </a>
               </div>
             </div>

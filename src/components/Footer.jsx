@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, FileText } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons';
 import { SERVICE_PAGES } from '../data/servicePagesData';
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -85,21 +85,35 @@ export default function Footer({ onNavigateService }) {
                 <a
                   href="https://www.linkedin.com/in/shailinya-saxena-%F0%9F%87%AE%F0%9F%87%B3-270b35208"
                   target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-[#191C21] inline-flex items-center gap-1"
+                  rel="noopener noreferrer"
+                  aria-label="Connect with Neudact Engineers on LinkedIn"
+                  className="hover:text-[#191C21] inline-flex items-center gap-1.5"
                 >
-                  <LinkedinIcon className="w-3 h-3 text-[#0A66C2]" />
+                  <LinkedinIcon className="w-3.5 h-3.5 text-[#0A66C2]" />
                   <span>LinkedIn Profile</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/neudact_engineers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Neudact Engineers on Instagram"
+                  className="hover:text-[#191C21] inline-flex items-center gap-1.5"
+                >
+                  <InstagramIcon className="w-3.5 h-3.5 text-[#E1306C]" />
+                  <span>Instagram (@neudact_engineers)</span>
                 </a>
               </li>
               <li>
                 <a
                   href="https://github.com/ShailinyaSaxenaWorkSpace"
                   target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-[#191C21] inline-flex items-center gap-1"
+                  rel="noopener noreferrer"
+                  aria-label="View Neudact Engineers GitHub Repository"
+                  className="hover:text-[#191C21] inline-flex items-center gap-1.5"
                 >
-                  <GithubIcon className="w-3 h-3 text-[#191C21]" />
+                  <GithubIcon className="w-3.5 h-3.5 text-[#191C21]" />
                   <span>GitHub Repository</span>
                 </a>
               </li>
