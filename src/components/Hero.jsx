@@ -103,8 +103,12 @@ export default function Hero({ onSelectService }) {
               </div>
               
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#191C21] leading-[1.1]">
-                Build Better. Bid Smarter. Automate More.
+                Engineering &amp; Technology Solutions for Businesses
               </h1>
+
+              <p className="font-serif italic text-lg sm:text-xl text-[#3A404D]">
+                Build Better. Bid Smarter. Automate More.
+              </p>
             </div>
 
             <p className="text-base sm:text-lg text-[#525966] leading-relaxed max-w-2xl font-sans">

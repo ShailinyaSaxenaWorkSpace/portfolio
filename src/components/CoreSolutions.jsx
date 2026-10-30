@@ -43,7 +43,7 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
           </div>
           
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#191C21]">
-            Engineering &amp; Technology Solutions
+            Core Engineering &amp; Technology Service Divisions
           </h2>
           
           <p className="text-base text-[#525966] leading-relaxed font-sans">
@@ -122,13 +122,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('custom-software-development')}
+                    <a
+                      href="/services/custom-software-development"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('custom-software-development');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Read Specs</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Software, Web Development & Automation')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
@@ -168,13 +172,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('custom-software-development')}
+                    <a
+                      href="/services/custom-software-development"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('custom-software-development');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Custom Software Development')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
@@ -214,13 +222,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('business-process-automation-ai')}
+                    <a
+                      href="/services/business-process-automation-ai"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('business-process-automation-ai');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Software, Web Development & Automation')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
@@ -282,13 +294,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('tender-management-india')}
+                    <a
+                      href="/services/tender-management-india"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('tender-management-india');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Tender Management & Procurement Support')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
@@ -324,13 +340,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('tender-management-india')}
+                    <a
+                      href="/services/tender-management-india"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('tender-management-india');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Tender Management & Procurement Support')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
@@ -366,13 +386,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('railway-tender-ireps-support')}
+                    <a
+                      href="/services/railway-tender-ireps-support"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('railway-tender-ireps-support');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Tender Management & Procurement Support')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#B84C2A] inline-flex items-center gap-1 group cursor-pointer"
@@ -434,13 +458,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('solar-plant-sld-design-sourcing')}
+                    <a
+                      href="/services/solar-plant-sld-design-sourcing"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('solar-plant-sld-design-sourcing');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Solar & Renewable Energy Solutions')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#1A549E] inline-flex items-center gap-1 group cursor-pointer"
@@ -476,13 +504,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('solar-plant-sld-design-sourcing')}
+                    <a
+                      href="/services/solar-plant-sld-design-sourcing"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('solar-plant-sld-design-sourcing');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Solar & Renewable Energy Solutions')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#1A549E] inline-flex items-center gap-1 group cursor-pointer"
@@ -518,13 +550,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('telecom-networking-solutions')}
+                    <a
+                      href="/services/telecom-networking-solutions"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('telecom-networking-solutions');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Networking & Telecom Infrastructure')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#1A549E] inline-flex items-center gap-1 group cursor-pointer"
@@ -586,13 +622,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </ul>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('cctv-vms-surveillance-solutions')}
+                    <a
+                      href="/services/cctv-vms-surveillance-solutions"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('cctv-vms-surveillance-solutions');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Security, CCTV & VMS')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#A34E1A] inline-flex items-center gap-1 group cursor-pointer"
@@ -624,13 +664,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </div>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('drone-uav-solutions')}
+                    <a
+                      href="/services/drone-uav-solutions"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('drone-uav-solutions');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Drone & UAV Solutions')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#A34E1A] inline-flex items-center gap-1 group cursor-pointer"
@@ -662,13 +706,17 @@ export default function CoreSolutions({ onSelectService, onNavigateService }) {
                     </div>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#EFE9DF] flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewDetails('engineering-infrastructure-solutions')}
+                    <a
+                      href="/services/engineering-infrastructure-solutions"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleViewDetails('engineering-infrastructure-solutions');
+                      }}
                       className="text-xs font-mono text-[#575D6A] hover:text-[#191C21] inline-flex items-center gap-1 cursor-pointer"
                     >
                       <FileText className="w-3 h-3 text-[#B84C2A]" />
                       <span>Dedicated Page</span>
-                    </button>
+                    </a>
                     <button
                       onClick={() => handleDiscuss('Indigenous Defence & Engineering Solutions')}
                       className="text-xs font-mono font-medium text-[#191C21] hover:text-[#A34E1A] inline-flex items-center gap-1 group cursor-pointer"

@@ -49,12 +49,16 @@ export default function Footer({ onNavigateService }) {
                 const s = SERVICE_PAGES[key];
                 return (
                   <li key={key}>
-                    <button
-                      onClick={() => onNavigateService && onNavigateService(key)}
+                    <a
+                      href={s.path}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (onNavigateService) onNavigateService(key);
+                      }}
                       className="text-left hover:text-[#191C21] hover:underline cursor-pointer transition-colors truncate max-w-xs block"
                     >
                       {s.h1}
-                    </button>
+                    </a>
                   </li>
                 );
               })}

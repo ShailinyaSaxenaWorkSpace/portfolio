@@ -56,8 +56,12 @@ export default function Navbar({ onNavigateHome, currentRoute }) {
         <div className="flex items-center justify-between">
           
           {/* Identity with Official Logo */}
-          <button
-            onClick={() => onNavigateHome()}
+          <a
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigateHome();
+            }}
             className="flex items-center gap-3 group text-[#191C21] cursor-pointer text-left"
             aria-label="Neudact Engineers - Home"
           >
@@ -71,18 +75,22 @@ export default function Navbar({ onNavigateHome, currentRoute }) {
             <span className="hidden lg:inline-block font-mono text-[11px] text-[#7A8190] tracking-wide border-l border-[#DDD7CC] pl-3 py-1">
               Where Intelligence Meets Execution
             </span>
-          </button>
+          </a>
 
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => (
-              <button
+              <a
                 key={link.name}
-                onClick={() => handleLinkClick(link.href)}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(link.href);
+                }}
                 className="text-xs font-medium tracking-wide text-[#575D6A] hover:text-[#191C21] transition-colors cursor-pointer"
               >
                 {link.name}
-              </button>
+              </a>
             ))}
           </nav>
 
@@ -98,13 +106,17 @@ export default function Navbar({ onNavigateHome, currentRoute }) {
               <span>Brochure (PDF)</span>
             </a>
 
-            <button
-              onClick={() => handleLinkClick('#contact')}
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick('#contact');
+              }}
               className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded text-xs font-medium text-white bg-[#191C21] hover:bg-[#2E333D] transition-colors cursor-pointer"
             >
               <span>Discuss Project</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#B84C2A]" />
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Trigger */}
@@ -134,23 +146,31 @@ export default function Navbar({ onNavigateHome, currentRoute }) {
         <div className="xl:hidden bg-[#FBF9F5] border-b border-[#E6E0D5] px-4 pt-4 pb-6 space-y-3">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
-              <button
+              <a
                 key={link.name}
-                onClick={() => handleLinkClick(link.href)}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(link.href);
+                }}
                 className="text-left text-sm font-medium text-[#4E5564] hover:text-[#191C21] py-1 border-b border-[#F0EAE1] cursor-pointer"
               >
                 {link.name}
-              </button>
+              </a>
             ))}
           </nav>
           <div className="pt-2">
-            <button
-              onClick={() => handleLinkClick('#contact')}
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick('#contact');
+              }}
               className="w-full py-2 px-4 rounded text-xs font-semibold text-white bg-[#191C21] flex items-center justify-center gap-1 cursor-pointer"
             >
               <span>Discuss a Requirement</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#B84C2A]" />
-            </button>
+            </a>
           </div>
         </div>
       )}
