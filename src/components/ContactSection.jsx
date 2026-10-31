@@ -277,10 +277,10 @@ export default function ContactSection({ activeService }) {
                   <a
                     href="https://wa.me/919354249637"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 hover:underline"
                   >
-                    <span>WhatsApp</span>
+                    <span>WhatsApp Consultation</span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
@@ -305,9 +305,10 @@ export default function ContactSection({ activeService }) {
                   href="/Neudact_Engineers_Capabilities_Brochure.pdf"
                   download="Neudact_Engineers_Capabilities_Brochure.pdf"
                   className="inline-flex items-center gap-1.5 text-[#B84C2A] hover:underline"
+                  title="Download Neudact Engineering Capabilities Dossier"
                 >
                   <FileText className="w-3.5 h-3.5" />
-                  <span>Download Brochure (PDF)</span>
+                  <span>Download Capabilities Dossier (PDF)</span>
                 </a>
 
                 <a

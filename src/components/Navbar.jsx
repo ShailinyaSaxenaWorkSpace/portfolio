@@ -100,10 +100,10 @@ export default function Navbar({ onNavigateHome, currentRoute }) {
               href="/Neudact_Engineers_Capabilities_Brochure.pdf"
               download="Neudact_Engineers_Capabilities_Brochure.pdf"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-mono text-[#575D6A] hover:text-[#191C21] hover:bg-[#F2ECE3] border border-[#DDD7CC] transition-colors"
-              title="Download Capabilities Brochure (PDF)"
+              title="Download Corporate Brochure (PDF)"
             >
               <FileText className="w-3.5 h-3.5 text-[#B84C2A]" />
-              <span>Brochure (PDF)</span>
+              <span>Corporate Brochure (PDF)</span>
             </a>
 
             <a
@@ -126,6 +126,7 @@ export default function Navbar({ onNavigateHome, currentRoute }) {
               download="Neudact_Engineers_Capabilities_Brochure.pdf"
               className="p-1.5 text-[#575D6A] border border-[#DDD7CC] rounded"
               title="Download Capabilities Brochure (PDF)"
+              aria-label="Download Capabilities Brochure (PDF)"
             >
               <FileText className="w-4 h-4 text-[#B84C2A]" />
             </a>

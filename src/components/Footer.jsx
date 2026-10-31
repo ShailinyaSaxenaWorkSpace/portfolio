@@ -122,10 +122,10 @@ export default function Footer({ onNavigateService }) {
                   href="/Neudact_Engineers_Capabilities_Brochure.pdf"
                   download="Neudact_Engineers_Capabilities_Brochure.pdf"
                   className="inline-flex items-center gap-1.5 text-[#B84C2A] font-semibold hover:underline"
-                  title="Download Capabilities Brochure (PDF)"
+                  title="Download Neudact Capabilities Brochure (PDF)"
                 >
                   <FileText className="w-3.5 h-3.5" />
-                  <span>Capabilities Brochure (PDF)</span>
+                  <span>Neudact Capabilities Brochure (PDF)</span>
                 </a>
               </li>
             </ul>

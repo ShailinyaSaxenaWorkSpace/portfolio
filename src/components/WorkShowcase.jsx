@@ -68,7 +68,8 @@ export default function WorkShowcase() {
       functionality: 'Sub-second load times, dynamic inquiry preselection, multi-channel inquiry routing (Netlify, WhatsApp, Gmail), and integrated PDF document distribution.',
       technologies: ['React 19', 'Tailwind CSS', 'Vite', 'JavaScript (ES6+)', 'Netlify Forms', 'Responsive UI'],
       github: 'https://github.com/ShailinyaSaxenaWorkSpace',
-      type: 'compact'
+      type: 'compact',
+      architectureNote: 'High-performance React 19 architecture pre-rendered for search bots and AI crawler discovery.'
     },
     {
       id: 'hrms-lite',
@@ -81,7 +82,8 @@ export default function WorkShowcase() {
       functionality: 'Role-based access control, attendance logging, employee profiles, and exportable data summaries.',
       technologies: ['React', 'Node.js', 'Express.js', 'MongoDB Atlas', 'JWT Authentication', 'REST APIs'],
       github: 'https://github.com/ShailinyaSaxenaWorkSpace',
-      type: 'compact'
+      type: 'compact',
+      architectureNote: 'Full-stack modular REST API with JWT role-based access control and persistent Atlas schemas.'
     },
     {
       id: 'telegram-bot',
@@ -94,7 +96,8 @@ export default function WorkShowcase() {
       functionality: 'Chat-based document submission, automatic file categorization, cloud repository upload, and real-time team broadcasts.',
       technologies: ['Node.js', 'Telegram Bot API', 'Webhook Listeners', 'Cloud Storage', 'Task Schedulers'],
       github: 'https://github.com/ShailinyaSaxenaWorkSpace',
-      type: 'compact'
+      type: 'compact',
+      architectureNote: 'Asynchronous event listeners and webhook endpoints dispatching multi-channel team notifications.'
     },
     {
       id: 'tender-rag-assistant',
@@ -107,7 +110,8 @@ export default function WorkShowcase() {
       functionality: 'Semantic question answering over complex contracts, citation extraction, clause cross-referencing, and human-in-the-loop review confirmation.',
       technologies: ['Python', 'Retrieval-Augmented Generation (RAG)', 'Vector Search', 'Text Parsing'],
       github: 'https://github.com/ShailinyaSaxenaWorkSpace',
-      type: 'compact'
+      type: 'compact',
+      architectureNote: 'Dense vector retrieval indexing multi-hundred page tender PDFs with direct citation extraction.'
     },
     {
       id: 'epc-pq-evaluator',
@@ -120,7 +124,8 @@ export default function WorkShowcase() {
       functionality: '3-year turnover averaging, single/double/triple work certificate matching, solvency test, and gap warning indicators.',
       technologies: ['JavaScript (ES6+)', 'Eligibility Logic', 'Excel Modeling', 'Audit Rules'],
       github: 'https://github.com/ShailinyaSaxenaWorkSpace',
-      type: 'compact'
+      type: 'compact',
+      architectureNote: 'Deterministic financial modeling engine evaluating CPWD and Railway qualification criteria.'
     }
   ];
 
@@ -216,17 +221,17 @@ export default function WorkShowcase() {
 
                   <div className="space-y-3 text-xs sm:text-[13px] leading-relaxed text-[#4E5564]">
                     <div>
-                      <strong className="text-[#191C21] font-medium block pb-0.5">The Operational Challenge:</strong>
+                      <span className="text-[#191C21] font-medium block pb-0.5">The Operational Challenge:</span>
                       <p>{project.problem}</p>
                     </div>
 
                     <div>
-                      <strong className="text-[#191C21] font-medium block pb-0.5">The Technical Solution:</strong>
+                      <span className="text-[#191C21] font-medium block pb-0.5">The Technical Solution:</span>
                       <p>{project.solution}</p>
                     </div>
 
                     <div>
-                      <strong className="text-[#191C21] font-medium block pb-0.5">Main Functionality:</strong>
+                      <span className="text-[#191C21] font-medium block pb-0.5">Main Functionality:</span>
                       <p>{project.functionality}</p>
                     </div>
                   </div>
@@ -282,7 +287,7 @@ export default function WorkShowcase() {
                         {project.status}
                       </span>
                       <p className="text-xs text-[#7A8190] max-w-xs">
-                        Modular architecture ready for enterprise deployment or client-specific adaptation.
+                        {project.architectureNote || 'Modular architecture engineered for production deployment.'}
                       </p>
                     </div>
                   )}
