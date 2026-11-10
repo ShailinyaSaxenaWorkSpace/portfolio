@@ -3,7 +3,7 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/((?!services/|assets/|neudact-logo|favicon|robots|sitemap).*)",
+      "source": "/((?!services/|assets/|neudact-logo|favicon|robots|sitemap|google).*)",
       "destination": "/index.html"
     }
   ],
