@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/((?!services/|assets/|neudact-logo|favicon|robots|sitemap|google).*)",
+      "source": "/((?!services/|assets/|neudact-logo|favicon|robots|sitemap|google|BingSiteAuth).*)",
       "destination": "/index.html"
     }
   ],
@@ -43,11 +42,20 @@
       ]
     },
     {
-      "source": "/sitemap.xml",
+      "source": "/(sitemap.xml|BingSiteAuth.xml)",
       "headers": [
         {
           "key": "Content-Type",
           "value": "application/xml; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "source": "/googleebc6027756b4c51d.html",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=UTF-8"
         }
       ]
     }
